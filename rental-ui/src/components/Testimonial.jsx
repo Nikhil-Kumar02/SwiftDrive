@@ -10,14 +10,14 @@ const Testimonial = () => {
       location: "Barcelona, Spain",
       image: assets.testimonial_image_1,
       testimonial:
-        "I've rented cars from various companies, but the experience with FleetX was exceptional.",
+        "I've rented cars from various companies, but the experience with CarRental was exceptional.",
     },
     {
       name: "John Smith",
       location: "New York, USA",
       image: assets.testimonial_image_2,
       testimonial:
-        "FleetX made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
+        "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
     },
     {
       name: "Sohie Lee",

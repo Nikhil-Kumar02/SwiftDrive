@@ -40,7 +40,7 @@ const Navbar = () => {
       <Link to="/">
         <motion.img
           whileHover={{ scale: 1.05 }}
-          src={assets.logo3}
+          src={assets.logo}
           alt="logo"
           className="h-8"
         />

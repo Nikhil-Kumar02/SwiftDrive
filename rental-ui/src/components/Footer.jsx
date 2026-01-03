@@ -21,7 +21,7 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            src={assets.logo3}
+            src={assets.logo}
             alt="logo"
             className="h-8 md:h-9"
           />
@@ -148,7 +148,7 @@ const Footer = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="flex flex-col md:flex-row gap-2 items-center justify-between py-5"
       >
-        <p>© {new Date().getFullYear()} FleetX. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} CarRental. All rights reserved.</p>
         <ul className="flex items-center gap-4">
           <li>
             <a href="#">Privacy</a>
