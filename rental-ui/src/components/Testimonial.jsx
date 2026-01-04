@@ -10,21 +10,21 @@ const Testimonial = () => {
       location: "Barcelona, Spain",
       image: assets.testimonial_image_1,
       testimonial:
-        "I've rented cars from various companies, but the experience with CarRental was exceptional.",
+        "I've rented cars from various companies, but the experience with SwiftDrive was exceptional.",
     },
     {
       name: "John Smith",
       location: "New York, USA",
       image: assets.testimonial_image_2,
       testimonial:
-        "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
+        "SwiftDrive made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!",
     },
     {
       name: "Sohie Lee",
       location: "Seoul, South Korea",
       image: assets.testimonial_image_1,
       testimonial:
-        "I highly recommend CarRental! Their fleet is amzing, and I always feel like I'm getting the best deal with excellent service.",
+        "I highly recommend SwiftDrive! Their fleet is amzing, and I always feel like I'm getting the best deal with excellent service.",
     },
   ];
 

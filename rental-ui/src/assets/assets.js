@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-import logo3 from "./logo3.svg";
 import gmail_logo from "./gmail_logo.svg";
 import facebook_logo from "./facebook_logo.svg";
 import instagram_logo from "./instagram_logo.svg";
@@ -33,6 +32,8 @@ import calendar_icon_colored from "./calendar_icon_colored.svg"
 import location_icon_colored from "./location_icon_colored.svg"
 import testimonial_image_1 from "./testimonial_image_1.png"
 import testimonial_image_2 from "./testimonial_image_2.png"
+import testimonial_image_3 from "./testimonial_image_3.avif"
+import testimonial_image_4 from "./testimonial_image_4.avif"
 import main_car from "./main_car.png"
 import banner_car_image from "./banner_car_image.png"
 import user_profile from "./user_profile.png"
@@ -46,7 +47,6 @@ export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
 
 export const assets = {
     logo,
-    logo3,
     gmail_logo,
     facebook_logo,
     instagram_logo,
@@ -80,6 +80,8 @@ export const assets = {
     filter_icon,
     testimonial_image_1,
     testimonial_image_2,
+    testimonial_image_3,
+    testimonial_image_4,
     main_car,
     banner_car_image,
     car_image1,

@@ -13,7 +13,7 @@ const Banner = () => {
       <div className="text-white">
         <h2 className="text-3xl font-medium">Do you own a Luxury Car?</h2>
         <p className="mt-2">
-          Montize your vehicle effortlessly by listening it on CarRental.
+          Montize your vehicle effortlessly by listening it on SwiftDrive.
         </p>
         <p className="max-w-130">
           We take care of insurance, driver verification and secure payments -
