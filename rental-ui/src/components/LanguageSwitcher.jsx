@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -25,13 +26,30 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 font-medium"
+        className="px-3 md:px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-1 md:gap-2 font-medium text-sm md:text-base"
       >
-        {currentLanguage?.name || 'Language'}
+        <span className="hidden sm:inline">{currentLanguage?.name || 'Language'}</span>
+        <span className="sm:hidden">{currentLanguage?.code.toUpperCase() || 'EN'}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -43,12 +61,12 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+        <div className="absolute left-0 sm:right-0 sm:left-auto mt-2 w-40 sm:w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full text-left px-4 py-2 hover:bg-blue-50 transition-colors ${
+              className={`w-full text-left px-3 md:px-4 py-2 hover:bg-blue-50 transition-colors text-sm md:text-base ${
                 i18n.language === lang.code
                   ? 'bg-blue-100 text-blue-700 font-semibold'
                   : 'text-gray-800'
