@@ -3,9 +3,11 @@ import Title from "../../components/owner/Title";
 import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
+import { useTranslation } from 'react-i18next';
 
 const AddCar = () => {
   const {axios, currency} = useAppContext();
+    const { t } = useTranslation();
 
   const [image, setImage] = useState(null);
   const [car, setCar] = useState({
@@ -64,8 +66,8 @@ const AddCar = () => {
   return (
     <div className="px-4 py-10 md:px-10 flex-1">
       <Title
-        title="Add New Car"
-        subTitle="Fill in details to list a new car for booking, including pricing, availability and car specifications."
+        title={t('owner.addNewCar')}
+        subTitle={t('owner.addCarSubtitle')}
       />
 
       <form
@@ -88,13 +90,13 @@ const AddCar = () => {
               onChange={(e) => setImage(e.target.files[0])}
             />
           </label>
-          <p className="text-sm text-gray-500">Upload a picture of your car</p>
+          <p className="text-sm text-gray-500">{t('owner.uploadImagePrompt')}</p>
         </div>
 
         {/* Car Brand & Model */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col w-full">
-            <label>Brand</label>
+            <label>{t('owner.carBrand')}</label>
             <input
               type="text"
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -106,7 +108,7 @@ const AddCar = () => {
           </div>
 
           <div className="flex flex-col w-full">
-            <label>Model</label>
+            <label>{t('owner.carModel')}</label>
             <input
               type="text"
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -121,7 +123,7 @@ const AddCar = () => {
         {/* Car Year, Price, Category */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="flex flex-col w-full">
-            <label>Year</label>
+            <label>{t('owner.year')}</label>
             <input
               type="number"
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -133,7 +135,7 @@ const AddCar = () => {
           </div>
 
           <div className="flex flex-col w-full">
-            <label>Daily Price ({currency})</label>
+            <label>{t('owner.pricePerDay')} ({currency})</label>
             <input
               type="number"
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -145,7 +147,7 @@ const AddCar = () => {
           </div>
 
           <div className="flex flex-col w-full">
-            <label>Category</label>
+            <label>{t('owner.category')}</label>
             <select
               onChange={(e) => setCar({ ...car, category: e.target.value })}
               value={car.category}
@@ -162,7 +164,7 @@ const AddCar = () => {
         {/* Car Transmission, Fuel Type, Seating Capacity */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="flex flex-col w-full">
-            <label>Transmission</label>
+            <label>{t('owner.transmission')}</label>
             <select
               onChange={(e) => setCar({ ...car, transmission: e.target.value })}
               value={car.transmission}
@@ -176,7 +178,7 @@ const AddCar = () => {
           </div>
 
           <div className="flex flex-col w-full">
-            <label>Fuel Type</label>
+            <label>{t('owner.fuelType')}</label>
             <select
               onChange={(e) => setCar({ ...car, fuel_type: e.target.value })}
               value={car.fuel_type}
@@ -191,7 +193,7 @@ const AddCar = () => {
           </div>
 
           <div className="flex flex-col w-full">
-            <label>Seating Capacity</label>
+            <label>{t('owner.seatingCapacity')}</label>
             <input
               type="number"
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -207,7 +209,7 @@ const AddCar = () => {
 
         {/* Car Location */}
         <div className="flex flex-col w-full">
-          <label>Location</label>
+          <label>{t('owner.location')}</label>
           <select
             onChange={(e) => setCar({ ...car, location: e.target.value })}
             value={car.location}
@@ -223,7 +225,7 @@ const AddCar = () => {
 
         {/* Car Description */}
         <div className="flex flex-col w-full">
-            <label>Description</label>
+            <label>{t('owner.description')}</label>
             <textarea
             rows={5}
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
@@ -236,7 +238,7 @@ const AddCar = () => {
 
           <button className="flex items-center gap-2 px-4 py-2.5 mt-4 bg-primary text-white rounded-md font-medium w-max cursor-pointer">
             <img src={assets.tick_icon} alt="" />
-            {isLoading ? "Listing...." : "List your Car"}
+            {isLoading ? t('common.loading') : t('owner.addNewCar')}
           </button>
       </form>
     </div>

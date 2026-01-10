@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "Bienvenue à la Location de Voitures",
+    "subtitle": "Trouvez votre voiture idéale",
+    "exploreButton": "Explorer les Voitures",
+    "bookNow": "Réserver Maintenant"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "cars": "Voitures",
+    "myBookings": "Mes Réservations",
+    "owner": "Pour les Propriétaires",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "listCars": "Lister les Voitures",
+    "dashboard": "Tableau de Bord",
+    "searchPlaceholder": "Rechercher des produits"
+  },
+  "hero": {
+    "title": "Voitures de Luxe à la Location",
+    "pickupLocation": "Lieu de Retrait",
+    "pickupDate": "Date de Retrait",
+    "dropoffDate": "Date de Retour",
+    "selectLocation": "Veuillez sélectionner un lieu",
+    "search": "Rechercher"
+  },
+  "banner": {
+    "title": "Possédez-vous une Voiture de Luxe?",
+    "subtitle": "Monétisez votre véhicule facilement en le listant sur SwiftDrive.",
+    "description": "Nous nous occupons de l'assurance, de la vérification du conducteur et des paiements sécurisés - afin que vous puissiez gagner un revenu passif, sans stress.",
+    "button": "Listez votre voiture"
+  },
+  "cars": {
+    "title": "Voitures Disponibles",
+    "filter": "Filtrer",
+    "search": "Rechercher des voitures...",
+    "noResults": "Aucune voiture trouvée",
+    "perDay": "Par Jour",
+    "book": "Réserver Maintenant",
+    "viewDetails": "Voir les Détails",
+    "category": "Catégorie",
+    "seatingCapacity": "Sièges",
+    "fuelType": "Type de Carburant",
+    "transmission": "Transmission"
+  },
+  "carCard": {
+    "perDay": "Par Jour",
+    "book": "Réserver Maintenant"
+  },
+  "booking": {
+    "title": "Complétez Votre Réservation",
+    "pickupDate": "Date de Retrait",
+    "dropoffDate": "Date de Retour",
+    "confirm": "Confirmer la Réservation",
+    "cancel": "Annuler",
+    "totalPrice": "Prix Total",
+    "bookingConfirmed": "Réservation confirmée avec succès!",
+    "myBookings": "Mes Réservations",
+    "status": "Statut",
+    "price": "Prix",
+    "confirmed": "Confirmé",
+    "pending": "En Attente"
+  },
+  "featured": {
+    "title": "Voitures en Vedette",
+    "viewAll": "Voir Tout"
+  },
+  "testimonial": {
+    "title": "Ce que Disent Nos Clients",
+    "stars": "Avis 5 Étoiles"
+  },
+  "newsletter": {
+    "title": "Abonnez-vous pour des Offres Spéciales",
+    "placeholder": "Entrez votre adresse email",
+    "button": "S'abonner"
+  },
+  "footer": {
+    "about": "À Propos",
+    "contact": "Contact",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "followUs": "Suivez-nous",
+    "company": "Entreprise",
+    "support": "Support",
+    "insurance": "Assurance",
+    "cookies": "Cookies",
+    "allRights": "Tous droits réservés"
+  },
+  "owner": {
+    "dashboard": "Tableau de Bord",
+    "addCar": "Ajouter une Voiture",
+    "manageCars": "Gérer les Voitures",
+    "manageBookings": "Gérer les Réservations",
+    "totalCars": "Total des Voitures",
+    "totalBookings": "Total des Réservations",
+    "pendingBookings": "Réservations en Attente",
+    "completedBookings": "Réservations Complétées",
+    "monthlyRevenue": "Revenu Mensuel",
+    "recentBookings": "Réservations Récentes",
+    "addNewCar": "Ajouter une Nouvelle Voiture",
+    "carBrand": "Marque de Voiture",
+    "carModel": "Modèle de Voiture",
+    "year": "Année",
+    "category": "Catégorie",
+    "seatingCapacity": "Capacité d'Assise",
+    "fuelType": "Type de Carburant",
+    "transmission": "Transmission",
+    "pricePerDay": "Prix par Jour",
+    "location": "Lieu",
+    "description": "Description",
+    "uploadImage": "Télécharger une Image",
+    "submit": "Soumettre",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette voiture?"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "submit": "Soumettre",
+    "noData": "Aucune donnée disponible"
+  }
+}

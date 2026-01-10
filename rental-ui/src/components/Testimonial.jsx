@@ -2,8 +2,11 @@ import React from "react";
 import Title from "./Title";
 import { assets } from "../assets/assets";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Testimonial = () => {
+  const { t } = useTranslation();
+
   const testimonials = [
     {
       name: "Emma Rodriguez",
@@ -31,8 +34,8 @@ const Testimonial = () => {
   return (
     <div className="py-28 px-6 md:px-16 lg-px-24 xl:px-44">
       <Title
-        title="What Our Customers Say"
-        subtitle="Discover why discerning travelers choose StayVenture for their luxury accomodations around the world."
+        title={t("testimonial.title")}
+        subtitle={t("testimonial.subtitle")}
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18">
         {testimonials.map((testimonial, idx) => (

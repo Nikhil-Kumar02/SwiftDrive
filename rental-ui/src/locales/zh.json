@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "欢迎来到汽车租赁",
+    "subtitle": "找到您完美的车辆",
+    "exploreButton": "探索汽车",
+    "bookNow": "立即预订"
+  },
+  "navbar": {
+    "home": "首页",
+    "cars": "汽车",
+    "myBookings": "我的预订",
+    "owner": "对于业主",
+    "login": "登录",
+    "logout": "登出",
+    "profile": "个人资料",
+    "listCars": "列出汽车",
+    "dashboard": "仪表板",
+    "searchPlaceholder": "搜索产品"
+  },
+  "hero": {
+    "title": "豪华汽车租赁",
+    "pickupLocation": "取车地点",
+    "pickupDate": "取车日期",
+    "dropoffDate": "还车日期",
+    "selectLocation": "请选择位置",
+    "search": "搜索"
+  },
+  "banner": {
+    "title": "您拥有豪华汽车吗？",
+    "subtitle": "通过在SwiftDrive上列出您的车辆，轻松将其货币化。",
+    "description": "我们负责保险、驾驶员验证和安全付款 - 因此您可以无压力地赚取被动收入。",
+    "button": "列出您的汽车"
+  },
+  "cars": {
+    "title": "可用汽车",
+    "filter": "筛选",
+    "search": "搜索汽车...",
+    "noResults": "未找到汽车",
+    "perDay": "每天",
+    "book": "立即预订",
+    "viewDetails": "查看详情",
+    "category": "类别",
+    "seatingCapacity": "座位",
+    "fuelType": "燃料类型",
+    "transmission": "变速器"
+  },
+  "carCard": {
+    "perDay": "每天",
+    "book": "立即预订"
+  },
+  "booking": {
+    "title": "完成您的预订",
+    "pickupDate": "取车日期",
+    "dropoffDate": "还车日期",
+    "confirm": "确认预订",
+    "cancel": "取消",
+    "totalPrice": "总价格",
+    "bookingConfirmed": "预订成功确认！",
+    "myBookings": "我的预订",
+    "status": "状态",
+    "price": "价格",
+    "confirmed": "已确认",
+    "pending": "待定"
+  },
+  "featured": {
+    "title": "精选汽车",
+    "viewAll": "查看全部"
+  },
+  "testimonial": {
+    "title": "我们的客户怎么说",
+    "stars": "5星评价"
+  },
+  "newsletter": {
+    "title": "订阅获取特别优惠",
+    "placeholder": "输入您的电子邮件地址",
+    "button": "订阅"
+  },
+  "footer": {
+    "about": "关于",
+    "contact": "联系",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "followUs": "关注我们",
+    "company": "公司",
+    "support": "支持",
+    "insurance": "保险",
+    "cookies": "Cookies",
+    "allRights": "版权所有"
+  },
+  "owner": {
+    "dashboard": "仪表板",
+    "addCar": "添加汽车",
+    "manageCars": "管理汽车",
+    "manageBookings": "管理预订",
+    "totalCars": "汽车总数",
+    "totalBookings": "预订总数",
+    "pendingBookings": "待定预订",
+    "completedBookings": "已完成预订",
+    "monthlyRevenue": "月收入",
+    "recentBookings": "最近的预订",
+    "addNewCar": "添加新汽车",
+    "carBrand": "汽车品牌",
+    "carModel": "汽车型号",
+    "year": "年份",
+    "category": "类别",
+    "seatingCapacity": "座位容量",
+    "fuelType": "燃料类型",
+    "transmission": "变速器",
+    "pricePerDay": "每天价格",
+    "location": "位置",
+    "description": "描述",
+    "uploadImage": "上传图像",
+    "submit": "提交",
+    "edit": "编辑",
+    "delete": "删除",
+    "confirmDelete": "您确定要删除此汽车吗？"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出错了",
+    "success": "成功",
+    "confirm": "确认",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "save": "保存",
+    "close": "关闭",
+    "submit": "提交",
+    "noData": "没有可用数据"
+  }
+}

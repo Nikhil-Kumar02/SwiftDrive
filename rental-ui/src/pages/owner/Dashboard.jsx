@@ -3,9 +3,11 @@ import { assets, dummyDashboardData } from "../../assets/assets";
 import Title from "../../components/owner/Title";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
+import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
   const {axios, isOwner, currency} = useAppContext();
+    const { t } = useTranslation();
 
   const [data, setData] = useState({
     totalCars: 0,
@@ -17,19 +19,19 @@ const Dashboard = () => {
   });
 
   const dashboardCards = [
-    { title: "Total Cars", value: data.totalCars, icon: assets.carIconColored },
+    { title: t('owner.totalCars'), value: data.totalCars, icon: assets.carIconColored },
     {
-      title: "Total Bookings",
+      title: t('owner.totalBookings'),
       value: data.totalBookings,
       icon: assets.listIconColored,
     },
     {
-      title: "Pendings",
+      title: t('owner.pendingBookings'),
       value: data.pendingBookings,
       icon: assets.cautionIconColored,
     },
     {
-      title: "Confirmed",
+      title: t('owner.completedBookings'),
       value: data.completedBookings,
       icon: assets.listIconColored,
     },
@@ -57,8 +59,8 @@ const Dashboard = () => {
   return (
     <div className="px-4 pt-10 md:px-10 flex-1">
       <Title
-        title="Admin Dashboard"
-        subTitle="Monitor overall platform performance including total cars, bookings, revenue and recent activities."
+        title={t('owner.dashboard')}
+        subTitle={t('owner.dashboardSubtitle')}
       />
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 max-w-3xl">
         {dashboardCards.map((card, idx) => (
@@ -81,8 +83,8 @@ const Dashboard = () => {
       <div className="flex flex-wrap items-start gap-6 mb-8 w-full">
         {/* Recent Bookings */}
         <div className="p-4 md:p-6 border border-borderColor rounded-md max-w-lg w-full">
-          <h1 className="text-lg font-medium">Recent Bookings</h1>
-          <p className="text-gray-500">Latest Customer bookings</p>
+          <h1 className="text-lg font-medium">{t('owner.recentBookings')}</h1>
+          <p className="text-gray-500">{t('owner.latestCustomerBookings')}</p>
           {data.recentBookings.map((booking, idx) => (
             <div key={idx} className="mt-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -115,11 +117,11 @@ const Dashboard = () => {
         </div>
 
         {/* Monthly Revenue */}
-        <div className="p-4 md:p-6 mb-6 border border-borderColor rounded-md w-full md:max-w-xs">
-            <h1 className="text-lg font-medium">Monthly Revenue</h1>
-            <p className="text-gray-500">Revenue for current month</p>
-            <p className="text-3xl mt-6 font-semibold text-primary">{currency}{data.monthlyRevenue}</p>
-        </div>
+      <div className="p-4 md:p-6 mb-6 border border-borderColor rounded-md w-full md:max-w-xs">
+        <h1 className="text-lg font-medium">{t('owner.monthlyRevenue')}</h1>
+        <p className="text-gray-500">{t('owner.monthlyRevenueSubtitle')}</p>
+        <p className="text-3xl mt-6 font-semibold text-primary">{currency}{data.monthlyRevenue}</p>
+      </div>
       </div>
     </div>
   );

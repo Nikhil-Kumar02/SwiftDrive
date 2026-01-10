@@ -3,11 +3,20 @@ import { assets, ownerMenuLinks } from "../../assets/assets";
 import { NavLink, useLocation } from "react-router-dom";
 import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
+import { useTranslation } from 'react-i18next';
 
 const Sidebar = () => {
   const {user, axios, fetchUser} = useAppContext();
   const location = useLocation();
   const [image, setImage] = useState("");
+    const { t } = useTranslation();
+
+    const linkKeyMap = {
+      'Dashboard': 'owner.dashboard',
+      'Add car': 'owner.addCar',
+      'Manage Cars': 'owner.manageCars',
+      'Manage Bookings': 'owner.manageBookings'
+    }
 
   const updateImage = async () => {
     try {
@@ -56,7 +65,7 @@ const Sidebar = () => {
 
       {image && (
         <button className="absolute top-0 right-0 flex p-2 gap-1 bg-primary/10 text-primary cursor-pointer" onClick={updateImage}>
-          Save <img src={assets.check_icon} width={13} alt="" />
+          {t('common.save')} <img src={assets.check_icon} width={13} alt="" />
         </button>
       )}
 
@@ -66,7 +75,7 @@ const Sidebar = () => {
         {ownerMenuLinks.map((link, idx) => (
             <NavLink key={idx} to={link.path} className={`relative flex items-center gap-2 w-full py-3 pl-4 first:mt-6 ${link.path === location.pathname ? 'bg-primary/10 text-primary' : 'text-gray-600'}`}>
                 <img src={link.path === location.pathname ? link.coloredIcon : link.icon} alt="car icon" />
-                <span className="max-md:hidden">{link.name}</span>
+                <span className="max-md:hidden">{t(linkKeyMap[link.name] ?? link.name)}</span>
 
                 <div className={`${link.path === location.pathname && 'bg-primary'} w-1.5 h-8 rounded-l right-0 absolute`}>
 

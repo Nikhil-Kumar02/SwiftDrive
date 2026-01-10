@@ -5,8 +5,10 @@ import CarCard from "./CarCard";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const FeaturedSection = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { cars } = useAppContext();
 
@@ -23,8 +25,8 @@ const FeaturedSection = () => {
         transition={{ duration: 1, delay: 0.5 }}
       >
         <Title
-          title="Featured Vehicles"
-          subtitle="Explore our selection of premium vehicles available for your next adventure."
+          title={t("featured.title")}
+          subtitle={t("featured.subtitle")}
         />
       </motion.div>
 
@@ -56,7 +58,7 @@ const FeaturedSection = () => {
         }}
         className="flex items-center justify-center gap-2 px-6 py-2 border border-borderColor hover:bg-gray-50 rounded-md mt-18 cursor-pointer"
       >
-        Explore all cars <img src={assets.arrow_icon} alt="arrow" />
+        {t("featured.viewAll")} <img src={assets.arrow_icon} alt="arrow" />
       </motion.button>
     </motion.div>
   );

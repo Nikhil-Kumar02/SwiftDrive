@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "車レンタルへようこそ",
+    "subtitle": "完璧な車を見つけてください",
+    "exploreButton": "車を探索する",
+    "bookNow": "今すぐ予約"
+  },
+  "navbar": {
+    "home": "ホーム",
+    "cars": "車",
+    "myBookings": "マイ予約",
+    "owner": "オーナー向け",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "profile": "プロフィール",
+    "listCars": "車をリストアップ",
+    "dashboard": "ダッシュボード",
+    "searchPlaceholder": "製品を検索"
+  },
+  "hero": {
+    "title": "高級車のレンタル",
+    "pickupLocation": "ピックアップ場所",
+    "pickupDate": "ピックアップ日",
+    "dropoffDate": "ドロップオフ日",
+    "selectLocation": "場所を選択してください",
+    "search": "検索"
+  },
+  "banner": {
+    "title": "高級車を所有していますか？",
+    "subtitle": "SwiftDriveに登録することで、車を簡単に現金化できます。",
+    "description": "保険、ドライバー認証、安全な支払いはすべてお任せください。ストレスなく受動的収入を得ることができます。",
+    "button": "あなたの車をリストアップ"
+  },
+  "cars": {
+    "title": "利用可能な車",
+    "filter": "フィルター",
+    "search": "車を検索...",
+    "noResults": "車が見つかりません",
+    "perDay": "1日あたり",
+    "book": "今すぐ予約",
+    "viewDetails": "詳細を表示",
+    "category": "カテゴリー",
+    "seatingCapacity": "座席数",
+    "fuelType": "燃料タイプ",
+    "transmission": "トランスミッション"
+  },
+  "carCard": {
+    "perDay": "1日あたり",
+    "book": "今すぐ予約"
+  },
+  "booking": {
+    "title": "予約を完了する",
+    "pickupDate": "ピックアップ日",
+    "dropoffDate": "ドロップオフ日",
+    "confirm": "予約を確認",
+    "cancel": "キャンセル",
+    "totalPrice": "合計価格",
+    "bookingConfirmed": "予約が正常に確認されました！",
+    "myBookings": "マイ予約",
+    "status": "ステータス",
+    "price": "価格",
+    "confirmed": "確認済み",
+    "pending": "保留中"
+  },
+  "featured": {
+    "title": "おすすめ車",
+    "viewAll": "すべて表示"
+  },
+  "testimonial": {
+    "title": "お客様の声",
+    "stars": "5つ星レビュー"
+  },
+  "newsletter": {
+    "title": "特別オファーを受け取るにはサブスクライブしてください",
+    "placeholder": "メールアドレスを入力",
+    "button": "購読"
+  },
+  "footer": {
+    "about": "について",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "followUs": "フォロー",
+    "company": "会社",
+    "support": "サポート",
+    "insurance": "保険",
+    "cookies": "Cookie",
+    "allRights": "著作権所有"
+  },
+  "owner": {
+    "dashboard": "ダッシュボード",
+    "addCar": "車を追加",
+    "manageCars": "車を管理",
+    "manageBookings": "予約を管理",
+    "totalCars": "合計車数",
+    "totalBookings": "合計予約数",
+    "pendingBookings": "保留中の予約",
+    "completedBookings": "完了した予約",
+    "monthlyRevenue": "月間収益",
+    "recentBookings": "最近の予約",
+    "addNewCar": "新しい車を追加",
+    "carBrand": "車のブランド",
+    "carModel": "車のモデル",
+    "year": "年",
+    "category": "カテゴリー",
+    "seatingCapacity": "座席容量",
+    "fuelType": "燃料タイプ",
+    "transmission": "トランスミッション",
+    "pricePerDay": "1日あたりの価格",
+    "location": "場所",
+    "description": "説明",
+    "uploadImage": "画像をアップロード",
+    "submit": "送信",
+    "edit": "編集",
+    "delete": "削除",
+    "confirmDelete": "この車を削除してもよろしいですか？"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "問題が発生しました",
+    "success": "成功",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "save": "保存",
+    "close": "閉じる",
+    "submit": "送信",
+    "noData": "データはありません"
+  }
+}

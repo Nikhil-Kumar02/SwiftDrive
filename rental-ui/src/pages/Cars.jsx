@@ -7,8 +7,10 @@ import { useAppContext } from "../context/AppContext";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Cars = () => {
+  const { t } = useTranslation();
   // getting search params from the URL
   const [searchParams] = useSearchParams();
   const pickupLocation = searchParams.get("pickupLocation");
@@ -51,7 +53,7 @@ const Cars = () => {
       setFilteredCars(data.availableCars);
 
       if (data.availableCars.length === 0) {
-        toast.error("No cars available");
+        toast.error(t("cars.noResults"));
       }
       return null;
     }
@@ -74,7 +76,7 @@ const Cars = () => {
         className="flex flex-col items-center py-20 bg-light max-md:px-4"
       >
         <Title
-          title="Available Cars"
+          title={t("cars.title")}
           subtitle="Browse our selection of premium vehicles available for your next adventure"
         />
 
@@ -90,7 +92,7 @@ const Cars = () => {
             onChange={(e) => setInput(e.target.value)}
             value={input}
             type="text"
-            placeholder="Search by make, model or features"
+            placeholder={t("cars.search")}
             className="w-full h-full outline-none text-gray-500"
           />
 

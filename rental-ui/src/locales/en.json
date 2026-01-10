@@ -1,0 +1,162 @@
+{
+  "home": {
+    "title": "Welcome to Car Rental",
+    "subtitle": "Find your perfect ride",
+    "exploreButton": "Explore Cars",
+    "bookNow": "Book Now"
+  },
+  "navbar": {
+    "home": "Home",
+    "cars": "Cars",
+    "myBookings": "My Bookings",
+    "owner": "For Owners",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "listCars": "List Cars",
+    "dashboard": "Dashboard",
+    "searchPlaceholder": "Search products"
+  },
+  "hero": {
+    "title": "Luxury Cars on Rent",
+    "pickupLocation": "Pickup Location",
+    "pickupDate": "Pick-up Date",
+    "dropoffDate": "Return Date",
+    "selectLocation": "Please select location",
+    "search": "Search"
+  },
+  "banner": {
+    "title": "Do you own a Luxury Car?",
+    "subtitle": "Montize your vehicle effortlessly by listening it on SwiftDrive.",
+    "description": "We take care of insurance, driver verification and secure payments - so you can earn passive income, stress-free.",
+    "button": "List your car"
+  },
+  "cars": {
+    "title": "Available Cars",
+    "filter": "Filter",
+    "search": "Search cars...",
+    "noResults": "No cars found",
+    "perDay": "Per Day",
+    "book": "Book Now",
+    "viewDetails": "View Details",
+    "category": "Category",
+    "seatingCapacity": "Seating",
+    "fuelType": "Fuel Type",
+    "transmission": "Transmission"
+  },
+  "carCard": {
+    "perDay": "Per Day",
+    "book": "Book Now",
+    "fuelType": "Fuel Type",
+    "transmission": "Transmission",
+    "location": "Location"
+  },
+  "booking": {
+    "title": "Complete Your Booking",
+    "pickupDate": "Pickup Date",
+    "dropoffDate": "Dropoff Date",
+    "confirm": "Confirm Booking",
+    "cancel": "Cancel",
+    "totalPrice": "Total Price",
+    "bookingConfirmed": "Booking confirmed successfully!",
+    "myBookings": "My Bookings",
+    "status": "Status",
+    "price": "Price",
+    "confirmed": "Confirmed",
+    "pending": "Pending"
+    ,"cancelled": "Cancelled"
+  },
+  "featured": {
+    "title": "Featured Cars",
+    "subtitle": "Explore our selection of premium vehicles available for your next adventure.",
+    "viewAll": "View All"
+  },
+  "testimonial": {
+    "title": "What Our Customers Say",
+    "subtitle": "Discover why discerning travelers choose SwiftDrive for their luxury vehicles around the world.",
+    "stars": "5-Star Reviews"
+  },
+  "newsletter": {
+    "title": "Subscribe To Get Special Offers",
+    "subtitle": "Subscribe to get the latest offers, new arrivals, and exclusive discounts",
+    "placeholder": "Enter your email address",
+    "button": "Subscribe"
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "followUs": "Follow Us",
+    "company": "Company",
+    "support": "Support",
+    "insurance": "Insurance",
+    "cookies": "Cookies",
+    "allRights": "All rights reserved",
+    "description": "Premium car rental service with a wide selection of luxury and everyday vehicles for all your driving needs."
+  },
+  "owner": {
+    "dashboard": "Dashboard",
+    "addCar": "Add car",
+    "manageCars": "Manage Cars",
+    "manageBookings": "Manage Bookings",
+    "totalCars": "Total Cars",
+    "totalBookings": "Total Bookings",
+    "pendingBookings": "Pending Bookings",
+    "completedBookings": "Completed Bookings",
+    "monthlyRevenue": "Monthly Revenue",
+    "recentBookings": "Recent Bookings",
+    "addNewCar": "Add New Car",
+    "carBrand": "Car Brand",
+    "carModel": "Car Model",
+    "year": "Year",
+    "category": "Category",
+    "seatingCapacity": "Seating Capacity",
+    "fuelType": "Fuel Type",
+    "transmission": "Transmission",
+    "pricePerDay": "Price Per Day",
+    "location": "Location",
+    "description": "Description",
+    "uploadImage": "Upload Image",
+    "submit": "Submit",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this car?",
+    "welcome": "Welcome",
+    "ownerLabel": "Owner",
+    "dashboardSubtitle": "Monitor overall platform performance including total cars, bookings, revenue and recent activities.",
+    "latestCustomerBookings": "Latest Customer bookings",
+    "monthlyRevenueSubtitle": "Revenue for current month",
+    "addCarSubtitle": "Fill in details to list a new car for booking, including pricing, availability and car specifications.",
+    "manageCarsSubtitle": "View all listed cars, update their details or remove them from the booking platform.",
+    "manageBookingsSubtitle": "Track all customer bookings, approve or cancel requests and manage booking statuses.",
+    "uploadImagePrompt": "Upload a picture of your car",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
+  },
+  "common": {
+    "isAvailable": "Available",
+    "notAvailable": "Unavailable",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "success": "Success",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "close": "Close",
+    "submit": "Submit",
+    "noData": "No data available"
+    ,"to": "to"
+  }
+}

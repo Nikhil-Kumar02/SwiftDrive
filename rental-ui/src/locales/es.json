@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "Bienvenido al Alquiler de Autos",
+    "subtitle": "Encuentra tu vehículo perfecto",
+    "exploreButton": "Explorar Autos",
+    "bookNow": "Reservar Ahora"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "cars": "Autos",
+    "myBookings": "Mis Reservas",
+    "owner": "Para Propietarios",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "profile": "Perfil",
+    "listCars": "Listar Autos",
+    "dashboard": "Panel de Control",
+    "searchPlaceholder": "Buscar productos"
+  },
+  "hero": {
+    "title": "Autos de Lujo en Alquiler",
+    "pickupLocation": "Ubicación de Recogida",
+    "pickupDate": "Fecha de Recogida",
+    "dropoffDate": "Fecha de Devolución",
+    "selectLocation": "Por favor selecciona ubicación",
+    "search": "Buscar"
+  },
+  "banner": {
+    "title": "¿Posees un Auto de Lujo?",
+    "subtitle": "Monetiza tu vehículo fácilmente listándolo en SwiftDrive.",
+    "description": "Nos encargamos del seguro, verificación del conductor y pagos seguros - para que puedas ganar ingresos pasivos, sin estrés.",
+    "button": "Lista tu auto"
+  },
+  "cars": {
+    "title": "Autos Disponibles",
+    "filter": "Filtrar",
+    "search": "Buscar autos...",
+    "noResults": "No se encontraron autos",
+    "perDay": "Por Día",
+    "book": "Reservar Ahora",
+    "viewDetails": "Ver Detalles",
+    "category": "Categoría",
+    "seatingCapacity": "Asientos",
+    "fuelType": "Tipo de Combustible",
+    "transmission": "Transmisión"
+  },
+  "carCard": {
+    "perDay": "Por Día",
+    "book": "Reservar Ahora"
+  },
+  "booking": {
+    "title": "Completa Tu Reserva",
+    "pickupDate": "Fecha de Recogida",
+    "dropoffDate": "Fecha de Devolución",
+    "confirm": "Confirmar Reserva",
+    "cancel": "Cancelar",
+    "totalPrice": "Precio Total",
+    "bookingConfirmed": "¡Reserva confirmada exitosamente!",
+    "myBookings": "Mis Reservas",
+    "status": "Estado",
+    "price": "Precio",
+    "confirmed": "Confirmado",
+    "pending": "Pendiente"
+  },
+  "featured": {
+    "title": "Autos Destacados",
+    "viewAll": "Ver Todo"
+  },
+  "testimonial": {
+    "title": "Qué Dicen Nuestros Clientes",
+    "stars": "Reseñas de 5 Estrellas"
+  },
+  "newsletter": {
+    "title": "Suscríbete para Ofertas Especiales",
+    "placeholder": "Ingresa tu correo electrónico",
+    "button": "Suscribirse"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "followUs": "Síguenos",
+    "company": "Empresa",
+    "support": "Apoyo",
+    "insurance": "Seguro",
+    "cookies": "Cookies",
+    "allRights": "Todos los derechos reservados"
+  },
+  "owner": {
+    "dashboard": "Panel de Control",
+    "addCar": "Agregar Auto",
+    "manageCars": "Gestionar Autos",
+    "manageBookings": "Gestionar Reservas",
+    "totalCars": "Total de Autos",
+    "totalBookings": "Total de Reservas",
+    "pendingBookings": "Reservas Pendientes",
+    "completedBookings": "Reservas Completadas",
+    "monthlyRevenue": "Ingresos Mensuales",
+    "recentBookings": "Reservas Recientes",
+    "addNewCar": "Agregar Nuevo Auto",
+    "carBrand": "Marca del Auto",
+    "carModel": "Modelo del Auto",
+    "year": "Año",
+    "category": "Categoría",
+    "seatingCapacity": "Capacidad de Asientos",
+    "fuelType": "Tipo de Combustible",
+    "transmission": "Transmisión",
+    "pricePerDay": "Precio por Día",
+    "location": "Ubicación",
+    "description": "Descripción",
+    "uploadImage": "Subir Imagen",
+    "submit": "Enviar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar este auto?"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "submit": "Enviar",
+    "noData": "No hay datos disponibles"
+  }
+}

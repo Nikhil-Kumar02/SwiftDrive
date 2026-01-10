@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { assets, cityList } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [pickupLocation, setPickupLocation] = useState("");
 
   const { pickupDate, setPickupDate, returnDate, setReturnDate, navigate } =
@@ -34,7 +36,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-4xl md:text-5xl font-semibold"
       >
-        Luxury Cars on Rent
+        {t("hero.title")}
       </motion.h1>
 
       <motion.form
@@ -51,7 +53,7 @@ const Hero = () => {
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
             >
-              <option value="">Pickup Location</option>
+              <option value="">{t("hero.pickupLocation")}</option>
               {cityList.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -60,12 +62,12 @@ const Hero = () => {
             </select>
 
             <p className="px-1 text-sm text-gray-500">
-              {pickupLocation ? pickupLocation : "Please select location"}
+              {pickupLocation ? pickupLocation : t("hero.selectLocation")}
             </p>
           </div>
 
           <div className="flex flex-col items-start gap-2">
-            <label htmlFor="pickup-date">Pick-up Date</label>
+            <label htmlFor="pickup-date">{t("hero.pickupDate")}</label>
             <input
               value={pickupDate}
               onChange={(e) => setPickupDate(e.target.value)}
@@ -78,7 +80,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-start gap-2">
-            <label htmlFor="return-date">Return Date</label>
+            <label htmlFor="return-date">{t("hero.dropoffDate")}</label>
             <input
               value={returnDate}
               onChange={(e) => setReturnDate(e.target.value)}
@@ -99,7 +101,7 @@ const Hero = () => {
             alt="search"
             className="brightness-300"
           />
-          Search
+          {t("hero.search")}
         </motion.button>
       </motion.form>
 

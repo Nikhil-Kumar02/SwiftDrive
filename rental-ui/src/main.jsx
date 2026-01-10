@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { AppProvider } from "./context/AppContext.jsx";
 import { MotionConfig } from "motion/react";
+import "./i18n/config.js";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

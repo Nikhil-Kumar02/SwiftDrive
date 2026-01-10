@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "Bem-vindo à Locação de Carros",
+    "subtitle": "Encontre seu carro perfeito",
+    "exploreButton": "Explorar Carros",
+    "bookNow": "Agendar Agora"
+  },
+  "navbar": {
+    "home": "Início",
+    "cars": "Carros",
+    "myBookings": "Minhas Reservas",
+    "owner": "Para Proprietários",
+    "login": "Entrar",
+    "logout": "Sair",
+    "profile": "Perfil",
+    "listCars": "Listar Carros",
+    "dashboard": "Painel",
+    "searchPlaceholder": "Pesquisar produtos"
+  },
+  "hero": {
+    "title": "Carros de Luxo para Alugar",
+    "pickupLocation": "Local de Coleta",
+    "pickupDate": "Data de Coleta",
+    "dropoffDate": "Data de Devolução",
+    "selectLocation": "Por favor, selecione um local",
+    "search": "Pesquisar"
+  },
+  "banner": {
+    "title": "Você possui um carro de luxo?",
+    "subtitle": "Monetize seu veículo facilmente listando-o no SwiftDrive.",
+    "description": "Cuidamos do seguro, verificação do motorista e pagamentos seguros - para que você possa ganhar renda passiva, sem estresse.",
+    "button": "Liste seu carro"
+  },
+  "cars": {
+    "title": "Carros Disponíveis",
+    "filter": "Filtrar",
+    "search": "Pesquisar carros...",
+    "noResults": "Nenhum carro encontrado",
+    "perDay": "Por Dia",
+    "book": "Agendar Agora",
+    "viewDetails": "Ver Detalhes",
+    "category": "Categoria",
+    "seatingCapacity": "Capacidade",
+    "fuelType": "Tipo de Combustível",
+    "transmission": "Transmissão"
+  },
+  "carCard": {
+    "perDay": "Por Dia",
+    "book": "Agendar Agora"
+  },
+  "booking": {
+    "title": "Conclua Sua Reserva",
+    "pickupDate": "Data de Coleta",
+    "dropoffDate": "Data de Devolução",
+    "confirm": "Confirmar Reserva",
+    "cancel": "Cancelar",
+    "totalPrice": "Preço Total",
+    "bookingConfirmed": "Reserva confirmada com sucesso!",
+    "myBookings": "Minhas Reservas",
+    "status": "Status",
+    "price": "Preço",
+    "confirmed": "Confirmado",
+    "pending": "Pendente"
+  },
+  "featured": {
+    "title": "Carros em Destaque",
+    "viewAll": "Ver Todos"
+  },
+  "testimonial": {
+    "title": "O Que Nossos Clientes Dizem",
+    "stars": "Avaliações com 5 Estrelas"
+  },
+  "newsletter": {
+    "title": "Inscreva-se para Ofertas Especiais",
+    "placeholder": "Digite seu endereço de email",
+    "button": "Inscrever"
+  },
+  "footer": {
+    "about": "Sobre",
+    "contact": "Contato",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "followUs": "Siga-nos",
+    "company": "Empresa",
+    "support": "Suporte",
+    "insurance": "Seguro",
+    "cookies": "Cookies",
+    "allRights": "Todos os direitos reservados"
+  },
+  "owner": {
+    "dashboard": "Painel",
+    "addCar": "Adicionar Carro",
+    "manageCars": "Gerenciar Carros",
+    "manageBookings": "Gerenciar Reservas",
+    "totalCars": "Total de Carros",
+    "totalBookings": "Total de Reservas",
+    "pendingBookings": "Reservas Pendentes",
+    "completedBookings": "Reservas Concluídas",
+    "monthlyRevenue": "Receita Mensal",
+    "recentBookings": "Reservas Recentes",
+    "addNewCar": "Adicionar Novo Carro",
+    "carBrand": "Marca do Carro",
+    "carModel": "Modelo do Carro",
+    "year": "Ano",
+    "category": "Categoria",
+    "seatingCapacity": "Capacidade de Assentos",
+    "fuelType": "Tipo de Combustível",
+    "transmission": "Transmissão",
+    "pricePerDay": "Preço por Dia",
+    "location": "Local",
+    "description": "Descrição",
+    "uploadImage": "Enviar Imagem",
+    "submit": "Enviar",
+    "edit": "Editar",
+    "delete": "Deletar",
+    "confirmDelete": "Tem certeza de que deseja deletar este carro?"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "success": "Sucesso",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "delete": "Deletar",
+    "edit": "Editar",
+    "save": "Salvar",
+    "close": "Fechar",
+    "submit": "Enviar",
+    "noData": "Nenhum dado disponível"
+  }
+}

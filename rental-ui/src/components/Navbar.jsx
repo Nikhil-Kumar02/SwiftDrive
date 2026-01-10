@@ -4,10 +4,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const { setShowLogin, user, logout, isOwner, axios, setIsOwner } =
     useAppContext();
+  const { t } = useTranslation();
 
   const location = useLocation();
   const [open, setOpen] = useState(false);
@@ -51,17 +54,25 @@ const Navbar = () => {
           location.pathname === "/" ? "bg-light" : "bg-white"
         } ${open ? "max-sm:translate-x-0" : "max-sm:translate-x-full"}`}
       >
-        {menuLinks.map((link, idx) => (
-          <Link key={idx} to={link.path}>
-            {link.name}
-          </Link>
-        ))}
+        {menuLinks.map((link, idx) => {
+          const linkNameMap = {
+            "Home": "home",
+            "Cars": "cars",
+            "My Bookings": "myBookings"
+          };
+          const translationKey = linkNameMap[link.name] || link.name.toLowerCase();
+          return (
+            <Link key={idx} to={link.path}>
+              {t(`navbar.${translationKey}`)}
+            </Link>
+          );
+        })}
 
         <div className="hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56">
           <input
             type="text"
             className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
-            placeholder="Search products"
+            placeholder={t("navbar.searchPlaceholder")}
           />
           <img src={assets.search_icon} alt="search" />
         </div>
@@ -73,7 +84,7 @@ const Navbar = () => {
             }}
             className="cursor-pointer"
           >
-            {isOwner ? "Dashboard" : "List Cars"}
+            {isOwner ? t("navbar.dashboard") : t("navbar.listCars")}
           </button>
           <button
             onClick={() => {
@@ -81,8 +92,9 @@ const Navbar = () => {
             }}
             className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg"
           >
-            {user ? "Logout" : "Login"}
+            {user ? t("navbar.logout") : t("navbar.login")}
           </button>
+          <LanguageSwitcher />
         </div>
       </div>
 

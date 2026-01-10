@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Newsletter = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -16,7 +19,7 @@ const Newsletter = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="md:text-4xl text-2xl font-semibold"
       >
-        Never Miss a Deal!
+        {t("newsletter.title")}
       </motion.h1>
 
       <motion.p
@@ -25,8 +28,7 @@ const Newsletter = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="md:text-lg text-gray-500/70 pb-8"
       >
-        Subscribe to get the latest offers, new arrivals, and exclusive
-        discounts
+        {t("newsletter.subtitle")}
       </motion.p>
 
       <motion.form
@@ -38,14 +40,14 @@ const Newsletter = () => {
         <input
           className="border border-gray-300 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
           type="text"
-          placeholder="Enter your email id"
+          placeholder={t("newsletter.placeholder")}
           required
         />
         <button
           type="submit"
           className="md:px-12 px-8 h-full text-white bg-primary hover:bg-primary-dull transition-all cursor-pointer rounded-md rounded-l-none"
         >
-          Subscribe
+          {t("newsletter.button")}
         </button>
       </motion.form>
     </motion.div>

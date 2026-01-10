@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "Willkommen zur Autovermietung",
+    "subtitle": "Finden Sie Ihr perfektes Fahrzeug",
+    "exploreButton": "Autos erkunden",
+    "bookNow": "Jetzt buchen"
+  },
+  "navbar": {
+    "home": "Startseite",
+    "cars": "Autos",
+    "myBookings": "Meine Buchungen",
+    "owner": "Für Eigentümer",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "profile": "Profil",
+    "listCars": "Autos auflisten",
+    "dashboard": "Dashboard",
+    "searchPlaceholder": "Produkte suchen"
+  },
+  "hero": {
+    "title": "Luxusautos zu mieten",
+    "pickupLocation": "Abholort",
+    "pickupDate": "Abholdatum",
+    "dropoffDate": "Rückgabedatum",
+    "selectLocation": "Bitte wählen Sie einen Ort",
+    "search": "Suchen"
+  },
+  "banner": {
+    "title": "Besitzen Sie einen Luxuswagen?",
+    "subtitle": "Monetarisieren Sie Ihr Fahrzeug mühelos, indem Sie es auf SwiftDrive aufführen.",
+    "description": "Wir kümmern uns um Versicherung, Fahrerverifizierung und sichere Zahlungen - damit Sie stressfrei passives Einkommen verdienen können.",
+    "button": "Listén Sie Ihr Auto auf"
+  },
+  "cars": {
+    "title": "Verfügbare Autos",
+    "filter": "Filtern",
+    "search": "Autos suchen...",
+    "noResults": "Keine Autos gefunden",
+    "perDay": "Pro Tag",
+    "book": "Jetzt buchen",
+    "viewDetails": "Details anzeigen",
+    "category": "Kategorie",
+    "seatingCapacity": "Sitzplätze",
+    "fuelType": "Kraftstofftyp",
+    "transmission": "Getriebe"
+  },
+  "carCard": {
+    "perDay": "Pro Tag",
+    "book": "Jetzt buchen"
+  },
+  "booking": {
+    "title": "Schließen Sie Ihre Buchung ab",
+    "pickupDate": "Abholdatum",
+    "dropoffDate": "Rückgabedatum",
+    "confirm": "Buchung bestätigen",
+    "cancel": "Abbrechen",
+    "totalPrice": "Gesamtpreis",
+    "bookingConfirmed": "Buchung erfolgreich bestätigt!",
+    "myBookings": "Meine Buchungen",
+    "status": "Status",
+    "price": "Preis",
+    "confirmed": "Bestätigt",
+    "pending": "Ausstehend"
+  },
+  "featured": {
+    "title": "Empfohlene Autos",
+    "viewAll": "Alle ansehen"
+  },
+  "testimonial": {
+    "title": "Was unsere Kunden sagen",
+    "stars": "5-Sterne-Bewertungen"
+  },
+  "newsletter": {
+    "title": "Abonnieren Sie für Spezialangebote",
+    "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "button": "Abonnieren"
+  },
+  "footer": {
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "followUs": "Folgen Sie uns",
+    "company": "Unternehmen",
+    "support": "Unterstützung",
+    "insurance": "Versicherung",
+    "cookies": "Cookies",
+    "allRights": "Alle Rechte vorbehalten"
+  },
+  "owner": {
+    "dashboard": "Dashboard",
+    "addCar": "Auto hinzufügen",
+    "manageCars": "Autos verwalten",
+    "manageBookings": "Buchungen verwalten",
+    "totalCars": "Gesamtautos",
+    "totalBookings": "Gesamtbuchungen",
+    "pendingBookings": "Ausstehende Buchungen",
+    "completedBookings": "Abgeschlossene Buchungen",
+    "monthlyRevenue": "Monatliche Einnahmen",
+    "recentBookings": "Letzte Buchungen",
+    "addNewCar": "Neues Auto hinzufügen",
+    "carBrand": "Automarke",
+    "carModel": "Automodell",
+    "year": "Jahr",
+    "category": "Kategorie",
+    "seatingCapacity": "Sitzplatzkapazität",
+    "fuelType": "Kraftstofftyp",
+    "transmission": "Getriebe",
+    "pricePerDay": "Preis pro Tag",
+    "location": "Ort",
+    "description": "Beschreibung",
+    "uploadImage": "Bild hochladen",
+    "submit": "Einreichen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "confirmDelete": "Sind Sie sicher, dass Sie dieses Auto löschen möchten?"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Etwas ist schief gelaufen",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "close": "Schließen",
+    "submit": "Einreichen",
+    "noData": "Keine Daten verfügbar"
+  }
+}

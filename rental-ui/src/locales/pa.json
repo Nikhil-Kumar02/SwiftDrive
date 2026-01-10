@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "ਕਾਰ ਕਰਾਇਆ 'ਤੇ ਸਵਾਗਤ ਹੈ",
+    "subtitle": "ਆਪਣੀ ਸੰਪੂਰਨ ਗੱਡੀ ਲੱਭੋ",
+    "exploreButton": "ਕਾਰਾਂ ਦੀ ਖੋਜ ਕਰੋ",
+    "bookNow": "ਹੁਣ ਬੁਕ ਕਰੋ"
+  },
+  "navbar": {
+    "home": "ਮੁੱਖ ਪੰਨਾ",
+    "cars": "ਕਾਰਾਂ",
+    "myBookings": "ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "owner": "ਮਾਲਕਾਂ ਲਈ",
+    "login": "ਲਾਗ ਇਨ",
+    "logout": "ਲਾਗ ਆਊਟ",
+    "profile": "ਪ੍ਰੋਫਾਈਲ",
+    "listCars": "ਕਾਰਾਂ ਸੂਚੀ ਬਣਾਓ",
+    "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "searchPlaceholder": "ਉਤਪਾਦਾਂ ਦੀ ਖੋਜ ਕਰੋ"
+  },
+  "hero": {
+    "title": "ਕਰਾਇਆ 'ਤੇ ਲਾਕਜਰੀ ਕਾਰਾਂ",
+    "pickupLocation": "ਪਿਕਅਪ ਦੀ ਥਾਂ",
+    "pickupDate": "ਪਿਕਅਪ ਦੀ ਤਾਰੀਖ",
+    "dropoffDate": "ਡ੍ਰੌਪ-ਆਫ ਦੀ ਤਾਰੀਖ",
+    "selectLocation": "ਕਿਰਪਾ ਕਰਕੇ ਥਾਂ ਚੁਣੋ",
+    "search": "ਖੋਜ"
+  },
+  "banner": {
+    "title": "ਕੀ ਤੁਸੀਂ ਇੱਕ ਲਾਕਜਰੀ ਕਾਰ ਦੇ ਮਾਲਕ ਹੋ?",
+    "subtitle": "SwiftDrive 'ਤੇ ਇਸ ਨੂੰ ਸੂਚੀਬੱਧ ਕਰਕੇ ਆਪਣੀ ਗੱਡੀ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਮੁਦਰਾ ਵਿੱਚ ਬਦਲੋ।",
+    "description": "ਅਸੀਂ ਬੀਮਾ, ਡਰਾਈਵਰ ਤਸਦੀਕ ਅਤੇ ਸੁਰੱਖਿਅਤ ਭੁਗਤਾਨ ਦੀ ਦੇਖਭਾਲ ਕਰਦੇ ਹਾਂ - ਤਾਂ ਜੋ ਤੁਸੀਂ ਤਣਾਅ-ਮੁਕਤ ਪ੍ਰਭਾਵਿਤ ਆਮਦਨ ਕਮਾ ਸਕੋ।",
+    "button": "ਆਪਣੀ ਕਾਰ ਸੂਚੀਬੱਧ ਕਰੋ"
+  },
+  "cars": {
+    "title": "ਉਪਲਬਧ ਕਾਰਾਂ",
+    "filter": "ਫਿਲਟਰ",
+    "search": "ਕਾਰਾਂ ਖੋਜੋ...",
+    "noResults": "ਕੋਈ ਕਾਰ ਨਹੀਂ ਮਿਲੀ",
+    "perDay": "ਪ੍ਰਤੀ ਦਿਨ",
+    "book": "ਹੁਣ ਬੁਕ ਕਰੋ",
+    "viewDetails": "ਵੇਰਵੇ ਵੇਖੋ",
+    "category": "ਸ਼ਾਖਾ",
+    "seatingCapacity": "ਬੈਠਨ ਦੀ ਸਮਰੱਥਾ",
+    "fuelType": "ਬਲ੍ਹ ਦੀ ਕਿਸਮ",
+    "transmission": "ਟਰਾਂਸਮਿਸ਼ਨ"
+  },
+  "carCard": {
+    "perDay": "ਪ੍ਰਤੀ ਦਿਨ",
+    "book": "ਹੁਣ ਬੁਕ ਕਰੋ"
+  },
+  "booking": {
+    "title": "ਆਪਣੀ ਬੁਕਿੰਗ ਪੂਰੀ ਕਰੋ",
+    "pickupDate": "ਪਿਕਅਪ ਦੀ ਤਾਰੀਖ",
+    "dropoffDate": "ਡ੍ਰੌਪ-ਆਫ ਦੀ ਤਾਰੀਖ",
+    "confirm": "ਬੁਕਿੰਗ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "totalPrice": "ਕੁੱਲ ਕੀਮਤ",
+    "bookingConfirmed": "ਬੁਕਿੰਗ ਸਫਲਤਾ ਨਾਲ ਪੁਸ਼ਟੀ ਹੋ ਗਈ!",
+    "myBookings": "ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "status": "ਸਥਿਤੀ",
+    "price": "ਕੀਮਤ",
+    "confirmed": "ਪੁਸ਼ਟੀ ਹੋਈ",
+    "pending": "ਲੰਬਿਤ"
+  },
+  "featured": {
+    "title": "ਫਿਚੁਰ ਕਾਰਾਂ",
+    "viewAll": "ਸਭ ਵੇਖੋ"
+  },
+  "testimonial": {
+    "title": "ਸਾਡੇ ਗ੍ਰਾਹਕ ਕੀ ਕਹਿੰਦੇ ਹਨ",
+    "stars": "5-ਸਟਾਰ ਸਮੀਖਿਆਵਾਂ"
+  },
+  "newsletter": {
+    "title": "ਖਾਸ ਆਫਰਾਂ ਲਈ ਸਾਈਨ ਅਪ ਕਰੋ",
+    "placeholder": "ਆਪਣਾ ਈ-ਮੇਲ ਐਡਰੈਸ ਦਰਜ ਕਰੋ",
+    "button": "ਸਾਈਨ ਅਪ ਕਰੋ"
+  },
+  "footer": {
+    "about": "ਬਾਰੇ",
+    "contact": "ਸੰਪਰਕ",
+    "privacy": "ਨਿਜੀ ਨੀਤੀ",
+    "terms": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+    "followUs": "ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ",
+    "company": "ਕੰਪਨੀ",
+    "support": "ਸਮਰਥਨ",
+    "insurance": "ਬੀਮਾ",
+    "cookies": "ਕੁਕੀਜ਼",
+    "allRights": "ਸਮਸਤ ਅਧਿਕਾਰ ਸੁਰੱਖਿਅਤ"
+  },
+  "owner": {
+    "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "addCar": "ਕਾਰ ਜੋੜੋ",
+    "manageCars": "ਕਾਰਾਂ ਨੂੰ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+    "manageBookings": "ਬੁਕਿੰਗ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+    "totalCars": "ਕੁੱਲ ਕਾਰਾਂ",
+    "totalBookings": "ਕੁੱਲ ਬੁਕਿੰਗਾਂ",
+    "pendingBookings": "ਲੰਬਿਤ ਬੁਕਿੰਗਾਂ",
+    "completedBookings": "ਪੂਰੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "monthlyRevenue": "ਮਾਸਿਕ ਆਮਦਨ",
+    "recentBookings": "ਹਾਲ ਦੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "addNewCar": "ਨਵੀਂ ਕਾਰ ਜੋੜੋ",
+    "carBrand": "ਕਾਰ ਬ੍ਰਾਂਡ",
+    "carModel": "ਕਾਰ ਮਾਡਲ",
+    "year": "ਸਾਲ",
+    "category": "ਸ਼ਾਖਾ",
+    "seatingCapacity": "ਬੈਠਨ ਦੀ ਸਮਰੱਥਾ",
+    "fuelType": "ਬਲ੍ਹ ਦੀ ਕਿਸਮ",
+    "transmission": "ਟਰਾਂਸਮਿਸ਼ਨ",
+    "pricePerDay": "ਪ੍ਰਤੀ ਦਿਨ ਕੀਮਤ",
+    "location": "ਸਥਾਨ",
+    "description": "ਵਰਣਨ",
+    "uploadImage": "ਚਿੱਤਰ ਅਪ਼ਲੋਡ ਕਰੋ",
+    "submit": "ਜਮਾ ਕਰੋ",
+    "edit": "ਸੋਧ",
+    "delete": "ਮਿਟਾਓ",
+    "confirmDelete": "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ ਕਾਰ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹਦੇ ਹੋ?"
+  },
+  "common": {
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+    "error": "ਕੁਝ ਗਲਤ ਹੋਇਆ",
+    "success": "ਸਫਲ",
+    "confirm": "ਪੁਸ਼ਟੀ ਕਰੋ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "delete": "ਮਿਟਾਓ",
+    "edit": "ਸੋਧ",
+    "save": "ਸੰਭਾਲੋ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "submit": "ਜਮਾ ਕਰੋ",
+    "noData": "ਕੋਈ ਡਾਟਾ ਉਪਲਬਧ ਨਹੀਂ"
+  }
+}

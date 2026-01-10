@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": "कार किराये में आपका स्वागत है",
+    "subtitle": "अपनी परिपूर्ण गाड़ी खोजें",
+    "exploreButton": "कारें देखें",
+    "bookNow": "अभी बुक करें"
+  },
+  "navbar": {
+    "home": "होम",
+    "cars": "कारें",
+    "myBookings": "मेरी बुकिंग",
+    "owner": "मालिकों के लिए",
+    "login": "लॉगिन",
+    "logout": "लॉगआउट",
+    "profile": "प्रोफाइल",
+    "listCars": "कारें सूचीबद्ध करें",
+    "dashboard": "डैशबोर्ड",
+    "searchPlaceholder": "उत्पाद खोजें"
+  },
+  "hero": {
+    "title": "किराये पर विलासितापूर्ण कारें",
+    "pickupLocation": "पिकअप स्थान",
+    "pickupDate": "पिकअप तारीख",
+    "dropoffDate": "ड्रॉप-ऑफ तारीख",
+    "selectLocation": "कृपया स्थान चुनें",
+    "search": "खोज"
+  },
+  "banner": {
+    "title": "क्या आप एक विलासितापूर्ण कार के मालिक हैं?",
+    "subtitle": "SwiftDrive पर इसे सूचीबद्ध करके अपनी गाड़ी को आसानी से मुद्रीकृत करें।",
+    "description": "हम बीमा, ड्राइवर सत्यापन और सुरक्षित भुगतान का ध्यान रखते हैं - ताकि आप बिना तनाव के निष्क्रिय आय अर्जित कर सकें।",
+    "button": "अपनी कार सूचीबद्ध करें"
+  },
+  "cars": {
+    "title": "उपलब्ध कारें",
+    "filter": "फिल्टर",
+    "search": "कारें खोजें...",
+    "noResults": "कोई कार नहीं मिली",
+    "perDay": "प्रति दिन",
+    "book": "अभी बुक करें",
+    "viewDetails": "विवरण देखें",
+    "category": "श्रेणी",
+    "seatingCapacity": "बैठने की क्षमता",
+    "fuelType": "ईंधन का प्रकार",
+    "transmission": "ट्रांसमिशन"
+  },
+  "carCard": {
+    "perDay": "प्रति दिन",
+    "book": "अभी बुक करें"
+  },
+  "booking": {
+    "title": "अपनी बुकिंग पूरी करें",
+    "pickupDate": "पिकअप तारीख",
+    "dropoffDate": "ड्रॉप-ऑफ तारीख",
+    "confirm": "बुकिंग की पुष्टि करें",
+    "cancel": "रद्द करें",
+    "totalPrice": "कुल मूल्य",
+    "bookingConfirmed": "बुकिंग सफलतापूर्वक पुष्टि हुई!",
+    "myBookings": "मेरी बुकिंग",
+    "status": "स्थिति",
+    "price": "कीमत",
+    "confirmed": "पुष्टि",
+    "pending": "लंबित"
+  },
+  "featured": {
+    "title": "विशेषता वाली कारें",
+    "viewAll": "सभी देखें"
+  },
+  "testimonial": {
+    "title": "हमारे ग्राहक क्या कहते हैं",
+    "stars": "5-स्टार समीक्षाएं"
+  },
+  "newsletter": {
+    "title": "विशेष ऑफर पाने के लिए सदस्यता लें",
+    "placeholder": "अपना ईमेल पता दर्ज करें",
+    "button": "सदस्यता लें"
+  },
+  "footer": {
+    "about": "के बारे में",
+    "contact": "संपर्क",
+    "privacy": "गोपनीयता नीति",
+    "terms": "सेवा की शर्तें",
+    "followUs": "हमें फॉलो करें",
+    "company": "कंपनी",
+    "support": "समर्थन",
+    "insurance": "बीमा",
+    "cookies": "कुकीज़",
+    "allRights": "सर्वाधिकार सुरक्षित"
+  },
+  "owner": {
+    "dashboard": "डैशबोर्ड",
+    "addCar": "कार जोड़ें",
+    "manageCars": "कारें प्रबंधित करें",
+    "manageBookings": "बुकिंग प्रबंधित करें",
+    "totalCars": "कुल कारें",
+    "totalBookings": "कुल बुकिंग",
+    "pendingBookings": "लंबित बुकिंग",
+    "completedBookings": "पूर्ण बुकिंग",
+    "monthlyRevenue": "मासिक राजस्व",
+    "recentBookings": "हाल की बुकिंग",
+    "addNewCar": "नई कार जोड़ें",
+    "carBrand": "कार का ब्रांड",
+    "carModel": "कार का मॉडल",
+    "year": "साल",
+    "category": "श्रेणी",
+    "seatingCapacity": "बैठने की क्षमता",
+    "fuelType": "ईंधन का प्रकार",
+    "transmission": "ट्रांसमिशन",
+    "pricePerDay": "प्रति दिन कीमत",
+    "location": "स्थान",
+    "description": "विवरण",
+    "uploadImage": "छवि अपलोड करें",
+    "submit": "जमा करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "confirmDelete": "क्या आप इस कार को हटाना चाहते हैं?"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "कुछ गलत हुआ",
+    "success": "सफल",
+    "confirm": "पुष्टि करें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "save": "सहेजें",
+    "close": "बंद करें",
+    "submit": "जमा करें",
+    "noData": "कोई डेटा उपलब्ध नहीं है"
+  }
+}

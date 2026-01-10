@@ -1,8 +1,11 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -31,8 +34,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="max-w-80 mt-3"
           >
-            Premium car rental service with a wide selection of luxury and
-            everyday vehicles for all your driving needs.
+            {t("footer.description")}
           </motion.p>
 
           {/* Footer Left Portion */}
@@ -79,20 +81,20 @@ const Footer = () => {
           {/* Column-1 */}
           <div>
             <h2 className="text-base font-medium text-gray-800 uppercase">
-              Quick Links
+              {t("footer.company")}
             </h2>
             <ul className="mt-3 flex flex-col gap-1.5">
               <li>
-                <a href="#">Home</a>
+                <a href="/">{t("navbar.home")}</a>
               </li>
               <li>
-                <a href="#">Browse Cars</a>
+                <a href="/cars">{t("navbar.cars")}</a>
               </li>
               <li>
-                <a href="#">List your Car</a>
+                <a href="#">{t("banner.button")}</a>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <a href="#">{t("footer.about")}</a>
               </li>
             </ul>
           </div>
@@ -100,20 +102,21 @@ const Footer = () => {
           {/* Column-2 */}
           <div>
             <h2 className="text-base font-medium text-gray-800 uppercase">
-              Resources
+              {t("footer.support")}
             </h2>
             <ul className="mt-3 flex flex-col gap-1.5">
               <li>
-                <a href="#">Help Center</a>
+                <a href="#">{t("footer.contact")}</a>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <a href="#">{t("footer.terms")}</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="#">{t("footer.privacy")}</a>
               </li>
               <li>
-                <a href="#">Insurance</a>
+                <a href="#">{t("footer.insurance")}</a>
+
               </li>
             </ul>
           </div>
@@ -121,7 +124,7 @@ const Footer = () => {
           {/* Column-3 */}
           <div>
             <h2 className="text-base font-medium text-gray-800 uppercase">
-              Contact
+              {t("footer.contact")}
             </h2>
             <ul className="mt-3 flex flex-col gap-1.5">
               <li>
@@ -148,18 +151,18 @@ const Footer = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="flex flex-col md:flex-row gap-2 items-center justify-between py-5"
       >
-        <p>© {new Date().getFullYear()} SwiftDrive. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} SwiftDrive. {t("footer.allRights")}</p>
         <ul className="flex items-center gap-4">
           <li>
-            <a href="#">Privacy</a>
+            <a href="#">{t("footer.privacy")}</a>
           </li>
           <li>|</li>
           <li>
-            <a href="#">Terms</a>
+            <a href="#">{t("footer.terms")}</a>
           </li>
           <li>|</li>
           <li>
-            <a href="#">Cookies</a>
+            <a href="#">{t("footer.cookies")}</a>
           </li>
         </ul>
       </motion.div>

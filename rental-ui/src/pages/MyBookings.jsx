@@ -4,8 +4,10 @@ import Title from "../components/Title";
 import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 const MyBookings = () => {
+  const { t } = useTranslation();
   const { axios, user, currency } = useAppContext();
   const [bookings, setBookings] = useState([]);
 
@@ -34,7 +36,7 @@ const MyBookings = () => {
       className="px-6 md:px-16 lg:px-24 xl:px-32 2xl:px-48 mt-16 text-sm max-w-7xl"
     >
       <Title
-        title="My Bookings"
+        title={t("booking.myBookings")}
         subtitle="View and manage your all car bookings"
         align="left"
       />
@@ -80,7 +82,7 @@ const MyBookings = () => {
                       : "bg-red-400/15 text-red-600"
                   }`}
                 >
-                  {booking.status}
+                  {booking.status === "confirmed" ? t("booking.confirmed") : t("booking.pending")}
                 </p>
               </div>
 

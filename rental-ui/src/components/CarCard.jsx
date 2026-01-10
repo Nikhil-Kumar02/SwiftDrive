@@ -1,8 +1,10 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CarCard = ({ car }) => {
+  const { t } = useTranslation();
   const currency = import.meta.env.VITE_CURRENCY;
   const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ const CarCard = ({ car }) => {
 
         {car.isAvailable && 
           <p className="absolute top-4 left-4 bg-primary/90 text-white text-xs px-2.5 py-1 rounded-full">
-            Available Now
+            {t("common.isAvailable")}
           </p>
         }
 
@@ -27,7 +29,7 @@ const CarCard = ({ car }) => {
             {currency}
             {car.pricePerDay}
           </span>
-          <span className="text-sm text-white/80"> / day</span>
+          <span className="text-sm text-white/80"> / {t("carCard.perDay")}</span>
         </div>
       </div>
 
