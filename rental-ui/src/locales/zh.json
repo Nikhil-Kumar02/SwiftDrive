@@ -46,7 +46,13 @@
   },
   "carCard": {
     "perDay": "每天",
-    "book": "立即预订"
+    "book": "立即预订",
+    "fuelType": "燃料类型",
+    "transmission": "变速器",
+    "location": "位置",
+    "compare": "比较",
+    "available": "可用",
+    "unavailable": "不可用"
   },
   "booking": {
     "title": "完成您的预订",
@@ -113,7 +119,18 @@
     "submit": "提交",
     "edit": "编辑",
     "delete": "删除",
-    "confirmDelete": "您确定要删除此汽车吗？"
+    "confirmDelete": "您确定要删除此汽车吗？",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
   },
   "common": {
     "loading": "加载中...",
@@ -126,6 +143,13 @@
     "save": "保存",
     "close": "关闭",
     "submit": "提交",
-    "noData": "没有可用数据"
+    "noData": "没有可用数据",
+    "compare": "比较",
+    "deselect": "Deselect",
+    "compareTitle": "车辆比较",
+    "compareSubtitle": "并排比较最多3辆汽车",
+    "clearAll": "清除全部",
+    "addMore": "添加更多汽车",
+    "day": "天"
   }
 }

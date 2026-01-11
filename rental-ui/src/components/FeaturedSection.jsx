@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 const FeaturedSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { cars } = useAppContext();
+  const { cars, selectedCars, handleAddToComparison } = useAppContext();
 
   return (
     <motion.div
@@ -43,7 +43,11 @@ const FeaturedSection = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             key={car._id}
           >
-            <CarCard car={car} />
+            <CarCard 
+              car={car} 
+              onCompare={handleAddToComparison}
+              isComparing={selectedCars.some(c => c._id === car._id)}
+            />
           </motion.div>
         ))}
       </motion.div>

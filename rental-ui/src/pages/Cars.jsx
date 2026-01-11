@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Title from "../components/Title";
 import { assets, dummyCarData } from "../assets/assets";
 import CarCard from "../components/CarCard";
+import CarComparison from "../components/CarComparison";
 import { useSearchParams } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import { useEffect } from "react";
@@ -17,10 +18,9 @@ const Cars = () => {
   const pickupDate = searchParams.get("pickupDate");
   const returnDate = searchParams.get("returnDate");
 
-  const { cars, axios } = useAppContext();
+  const { cars, axios, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison } = useAppContext();
 
   const [input, setInput] = useState("");
-
   const isSearchData = pickupLocation && pickupDate && returnDate;
   const [filteredCars, setFilteredCars] = useState([]);
 
@@ -69,6 +69,18 @@ const Cars = () => {
 
   return (
     <div>
+      {showComparison && (
+        <CarComparison
+          selectedCars={selectedCars}
+          onRemove={handleRemoveFromComparison}
+          onClose={() => setShowComparison(false)}
+          onAddMore={() => {
+            setShowComparison(false);
+            setTimeout(() => window.scrollTo(0, 0), 100);
+          }}
+        />
+      )}
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -113,12 +125,16 @@ const Cars = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 xl:px-20 max-w-7xl mx-auto">
           {filteredCars.map((car, idx) => (
             <motion.div
-              intial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * idx, duration: 0.4 }}
               key={idx}
             >
-              <CarCard car={car} />
+              <CarCard
+                car={car}
+                onCompare={handleAddToComparison}
+                isComparing={selectedCars.some(c => c._id === car._id)}
+              />
             </motion.div>
           ))}
         </div>

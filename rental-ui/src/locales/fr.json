@@ -46,7 +46,13 @@
   },
   "carCard": {
     "perDay": "Par Jour",
-    "book": "Réserver Maintenant"
+    "book": "Réserver Maintenant",
+    "fuelType": "Type de carburant",
+    "transmission": "Transmission",
+    "location": "Emplacement",
+    "compare": "Comparer",
+    "available": "disponible",
+    "unavailable": "indisponible"
   },
   "booking": {
     "title": "Complétez Votre Réservation",
@@ -113,7 +119,18 @@
     "submit": "Soumettre",
     "edit": "Modifier",
     "delete": "Supprimer",
-    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette voiture?"
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette voiture?",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
   },
   "common": {
     "loading": "Chargement...",
@@ -126,6 +143,13 @@
     "save": "Enregistrer",
     "close": "Fermer",
     "submit": "Soumettre",
-    "noData": "Aucune donnée disponible"
+    "noData": "Aucune donnée disponible",
+    "compare": "Comparer",
+    "deselect": "Deselect",
+    "compareTitle": "Comparaison de Voitures",
+    "compareSubtitle": "Comparez jusqu'à 3 voitures côte à côte",
+    "clearAll": "Tout Effacer",
+    "addMore": "Ajouter Plus de Voitures",
+    "day": "Jour"
   }
 }

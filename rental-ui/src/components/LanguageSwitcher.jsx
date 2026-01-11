@@ -46,10 +46,9 @@ export default function LanguageSwitcher() {
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-3 md:px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-1 md:gap-2 font-medium text-sm md:text-base"
+        className="px-3 md:px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-1 md:gap-2 font-medium text-sm md:text-base cursor-pointer"
       >
-        <span className="hidden sm:inline">{currentLanguage?.name || 'Language'}</span>
-        <span className="sm:hidden">{currentLanguage?.code.toUpperCase() || 'EN'}</span>
+        <span className="font-bold">{currentLanguage?.code.toUpperCase() || 'EN'}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -66,7 +65,7 @@ export default function LanguageSwitcher() {
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full text-left px-3 md:px-4 py-2 hover:bg-blue-50 transition-colors text-sm md:text-base ${
+              className={`w-full text-left px-2 md:px-3 py-2 hover:bg-blue-50 transition-colors text-sm md:text-base cursor-pointer ${
                 i18n.language === lang.code
                   ? 'bg-blue-100 text-blue-700 font-semibold'
                   : 'text-gray-800'

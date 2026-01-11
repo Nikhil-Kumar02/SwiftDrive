@@ -46,7 +46,13 @@
   },
   "carCard": {
     "perDay": "В день",
-    "book": "Забронировать сейчас"
+    "book": "Забронировать сейчас",
+    "fuelType": "Тип топлива",
+    "transmission": "Коробка передач",
+    "location": "Место",
+    "compare": "Сравнить",
+    "available": "Доступный",
+    "unavailable": "Недоступный"
   },
   "booking": {
     "title": "Завершите вашу бронь",
@@ -113,7 +119,18 @@
     "submit": "Отправить",
     "edit": "Редактировать",
     "delete": "Удалить",
-    "confirmDelete": "Вы уверены, что хотите удалить этот автомобиль?"
+    "confirmDelete": "Вы уверены, что хотите удалить этот автомобиль?",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
   },
   "common": {
     "loading": "Загрузка...",
@@ -126,6 +143,13 @@
     "save": "Сохранить",
     "close": "Закрыть",
     "submit": "Отправить",
-    "noData": "Нет доступных данных"
+    "noData": "Нет доступных данных",
+    "compare": "Сравнить",
+    "deselect": "Deselect",
+    "compareTitle": "Сравнение автомобилей",
+    "compareSubtitle": "Сравните до 3 автомобилей бок о бок",
+    "clearAll": "Очистить все",
+    "addMore": "Добавить больше автомобилей",
+    "day": "день"
   }
 }

@@ -37,6 +37,7 @@
     "search": "Search cars...",
     "noResults": "No cars found",
     "perDay": "Per Day",
+    "seats": "Seats",
     "book": "Book Now",
     "viewDetails": "View Details",
     "category": "Category",
@@ -49,7 +50,10 @@
     "book": "Book Now",
     "fuelType": "Fuel Type",
     "transmission": "Transmission",
-    "location": "Location"
+    "location": "Location",
+    "compare": "Compare",
+    "available": "Available",
+    "unavailable": "Unavailable"
   },
   "booking": {
     "title": "Complete Your Booking",
@@ -146,6 +150,7 @@
   "common": {
     "isAvailable": "Available",
     "notAvailable": "Unavailable",
+    "day": "Price Per Day",
     "loading": "Loading...",
     "error": "Something went wrong",
     "success": "Success",
@@ -156,7 +161,14 @@
     "save": "Save",
     "close": "Close",
     "submit": "Submit",
-    "noData": "No data available"
-    ,"to": "to"
+    "noData": "No data available",
+    "to": "to",
+    "compare": "Compare",
+    "compareTitle": "Car Comparison",
+    "compareSubtitle": "Compare up to 3 cars side by side",
+    "select": "Select",
+    "deselect": "Deselect",
+    "clearAll": "Clear All",
+    "addMore": "Add More Cars"
   }
 }

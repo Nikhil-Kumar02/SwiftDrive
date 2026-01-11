@@ -19,6 +19,45 @@ export const AppProvider = ({children}) => {
     const [returnDate, setReturnDate] = useState('')
 
     const [cars, setCars] = useState([])
+    const [selectedCars, setSelectedCars] = useState([])
+    const [showComparison, setShowComparison] = useState(false)
+
+    // Function to handle adding/removing cars from comparison
+    const handleAddToComparison = (car) => {
+        if (selectedCars.some(c => c._id === car._id)) {
+            const updated = selectedCars.filter(c => c._id !== car._id);
+            setSelectedCars(updated);
+            if (updated.length === 0) setShowComparison(false);
+        } else {
+            if (selectedCars.length < 3) {
+                const updated = [...selectedCars, car];
+                setSelectedCars(updated);
+                setShowComparison(true);
+                toast.success(`Added ${car.brand} ${car.model}`);
+            } else {
+                toast.error('Maximum 3 cars can be compared');
+            }
+        }
+    };
+
+    const handleRemoveFromComparison = (carId) => {
+        const updated = selectedCars.filter(c => c._id !== carId);
+        setSelectedCars(updated);
+        if (updated.length === 0) setShowComparison(false);
+    };
+
+    // Load comparison cars from localStorage on mount
+    useEffect(() => {
+        const saved = localStorage.getItem('comparisonCars');
+        if (saved) {
+            setSelectedCars(JSON.parse(saved));
+        }
+    }, []);
+
+    // Save comparison cars to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('comparisonCars', JSON.stringify(selectedCars));
+    }, [selectedCars]);
 
     // Function to check if user is logged in
     const fetchUser = async () => {
@@ -71,7 +110,7 @@ export const AppProvider = ({children}) => {
     }, [token])
 
     const value = {
-        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate
+        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison
     }
 
     return (

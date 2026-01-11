@@ -46,7 +46,13 @@
   },
   "carCard": {
     "perDay": "ਪ੍ਰਤੀ ਦਿਨ",
-    "book": "ਹੁਣ ਬੁਕ ਕਰੋ"
+    "book": "ਹੁਣ ਬੁਕ ਕਰੋ",
+    "fuelType": "ਬਲ੍ਹ ਦੀ ਕਿਸਮ",
+    "transmission": "ਟਰਾਂਸਮਿਸ਼ਨ",
+    "location": "ਟਿਕਾਣਾ",
+    "compare": "ਤੁਲਨਾ ਕਰੋ",
+    "available": "ਉਪਲਬਧ ਹੈ",
+    "unavailable": "ਅਣਉਪਲਬਧ"
   },
   "booking": {
     "title": "ਆਪਣੀ ਬੁਕਿੰਗ ਪੂਰੀ ਕਰੋ",
@@ -113,7 +119,18 @@
     "submit": "ਜਮਾ ਕਰੋ",
     "edit": "ਸੋਧ",
     "delete": "ਮਿਟਾਓ",
-    "confirmDelete": "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ ਕਾਰ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹਦੇ ਹੋ?"
+    "confirmDelete": "ਕੀ ਤੁਸੀਂ ਨਿਸ਼ਚਿਤ ਹੋ ਕਿ ਤੁਸੀਂ ਇਸ ਕਾਰ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹਦੇ ਹੋ?",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
   },
   "common": {
     "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
@@ -126,6 +143,13 @@
     "save": "ਸੰਭਾਲੋ",
     "close": "ਬੰਦ ਕਰੋ",
     "submit": "ਜਮਾ ਕਰੋ",
-    "noData": "ਕੋਈ ਡਾਟਾ ਉਪਲਬਧ ਨਹੀਂ"
+    "noData": "ਕੋਈ ਡਾਟਾ ਉਪਲਬਧ ਨਹੀਂ",
+    "compare": "ਤੁਲਨਾ ਕਰੋ",
+    "deselect": "Deselect",
+    "compareTitle": "ਕਾਰ ਤੁਲਨਾ",
+    "compareSubtitle": "3 ਕਾਰਾਂ ਦੀ ਤੁਲਨਾ ਕਰੋ",
+    "clearAll": "ਸਭ ਸਾਫ਼ ਕਰੋ",
+    "addMore": "ਹੋਰ ਕਾਰਾਂ ਜੋੜੋ",
+    "day": "ਦਿਨ"
   }
 }

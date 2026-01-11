@@ -46,7 +46,13 @@
   },
   "carCard": {
     "perDay": "प्रति दिन",
-    "book": "अभी बुक करें"
+    "book": "अभी बुक करें",
+    "fuelType": "ईंधन प्रकार",
+    "transmission": "संचरण",
+    "location": "जगह",
+    "compare": "तुलना करें",
+    "available": "उपलब्ध",
+    "unavailable": "अनुपलब्ध"
   },
   "booking": {
     "title": "अपनी बुकिंग पूरी करें",
@@ -113,7 +119,18 @@
     "submit": "जमा करें",
     "edit": "संपादित करें",
     "delete": "हटाएं",
-    "confirmDelete": "क्या आप इस कार को हटाना चाहते हैं?"
+    "confirmDelete": "क्या आप इस कार को हटाना चाहते हैं?",
+    "table": {
+      "car": "Car",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "dateRange": "Date Range",
+      "total": "Total",
+      "payment": "Payment",
+      "offline": "Offline"
+    }
   },
   "common": {
     "loading": "लोड हो रहा है...",
@@ -126,6 +143,13 @@
     "save": "सहेजें",
     "close": "बंद करें",
     "submit": "जमा करें",
-    "noData": "कोई डेटा उपलब्ध नहीं है"
+    "noData": "कोई डेटा उपलब्ध नहीं है",
+    "compare": "तुलना करें",
+    "deselect": "Deselect",
+    "compareTitle": "कार तुलना",
+    "compareSubtitle": "3 कारों की तुलना करें",
+    "clearAll": "सभी साफ करें",
+    "addMore": "और कारें जोड़ें",
+    "day": "दिन"
   }
 }
