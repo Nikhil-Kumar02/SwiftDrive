@@ -19,6 +19,7 @@ export const AppProvider = ({children}) => {
     const [returnDate, setReturnDate] = useState('')
 
     const [cars, setCars] = useState([])
+    const [search, setSearch] = useState('')
     const [selectedCars, setSelectedCars] = useState([])
     const [showComparison, setShowComparison] = useState(false)
 
@@ -110,7 +111,7 @@ export const AppProvider = ({children}) => {
     }, [token])
 
     const value = {
-        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison
+        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison, search, setSearch
     }
 
     return (

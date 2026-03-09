@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
-  const { setShowLogin, user, logout, isOwner, axios, setIsOwner } =
+  const { setShowLogin, user, logout, isOwner, axios, setIsOwner, search, setSearch } =
     useAppContext();
   const { t } = useTranslation();
 
@@ -36,11 +36,11 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 text-gray-600 border-b border-borderColor relative transition-all ${
+      className={`flex items-center justify-between px-6 md:px-10 lg:px-16 xl:px-24 py-4 text-gray-600 border-b border-borderColor relative transition-all ${
         location.pathname === "/" && "bg-light"
       }`}
     >
-      <Link to="/">
+      <Link to="/" className="flex-shrink-0">
         <motion.img
           whileHover={{ scale: 1.05 }}
           src={assets.logo}
@@ -50,9 +50,9 @@ const Navbar = () => {
       </Link>
 
       <div
-        className={`max-sm:fixed max-sm:h-screen max-sm:w-full max-sm:top-16 max-sm:border-t border-borderColor right-0 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 max-sm:p-4 transition-all duration-300 z-50 ${
+        className={`max-lg:fixed max-lg:h-screen max-lg:w-full max-lg:top-16 max-lg:border-t border-borderColor right-0 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 max-lg:p-6 max-lg:pb-24 max-lg:overflow-y-auto transition-all duration-300 z-50 ${
           location.pathname === "/" ? "bg-light" : "bg-white"
-        } ${open ? "max-sm:translate-x-0" : "max-sm:translate-x-full"}`}
+        } ${open ? "max-lg:translate-x-0" : "max-lg:translate-x-full"}`}
       >
         {menuLinks.map((link, idx) => {
           const linkNameMap = {
@@ -62,27 +62,37 @@ const Navbar = () => {
           };
           const translationKey = linkNameMap[link.name] || link.name.toLowerCase();
           return (
-            <Link key={idx} to={link.path}>
+            <Link key={idx} to={link.path} className="font-medium hover:text-primary transition-colors">
               {t(`navbar.${translationKey}`)}
             </Link>
           );
         })}
 
-        <div className="hidden lg:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56">
+        <div className="hidden xl:flex items-center text-sm gap-2 border border-borderColor px-3 rounded-full max-w-56">
           <input
             type="text"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              if (location.pathname !== "/cars") navigate("/cars");
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && location.pathname !== "/cars") {
+                navigate("/cars");
+              }
+            }}
             className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
             placeholder={t("navbar.searchPlaceholder")}
           />
-          <img src={assets.search_icon} alt="search" />
+          <img src={assets.search_icon} alt="search" className="cursor-pointer" onClick={() => navigate("/cars")} />
         </div>
 
-        <div className="flex max-sm:flex-col items-start sm:items-center gap-6">
+        <div className="flex max-lg:flex-col items-start lg:items-center gap-6">
           <button
             onClick={() => {
               isOwner ? navigate("/owner") : changeRole();
             }}
-            className="cursor-pointer"
+            className="cursor-pointer font-medium hover:text-primary transition-colors"
           >
             {isOwner ? t("navbar.dashboard") : t("navbar.listCars")}
           </button>
@@ -90,7 +100,7 @@ const Navbar = () => {
             onClick={() => {
               user ? logout() : setShowLogin(true);
             }}
-            className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg"
+            className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-white rounded-lg font-medium"
           >
             {user ? t("navbar.logout") : t("navbar.login")}
           </button>
@@ -99,7 +109,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className="sm:hidden cursor-pointer"
+        className="lg:hidden cursor-pointer"
         aria-label="Menu"
         onClick={() => setOpen(!open)}
       >

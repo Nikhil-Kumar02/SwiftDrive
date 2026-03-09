@@ -18,24 +18,24 @@ const Cars = () => {
   const pickupDate = searchParams.get("pickupDate");
   const returnDate = searchParams.get("returnDate");
 
-  const { cars, axios, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison } = useAppContext();
-
-  const [input, setInput] = useState("");
+  const { cars, axios, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison, search, setSearch } = useAppContext();
+  
   const isSearchData = pickupLocation && pickupDate && returnDate;
   const [filteredCars, setFilteredCars] = useState([]);
 
   const applyFilter = async () => {
-    if (input === "") {
+    if (search === "") {
       setFilteredCars(cars);
       return null;
     }
 
     const filtered = cars.slice().filter((car) => {
+      const searchLower = search.toLowerCase();
       return (
-        car.brand.toLowerCase().includes(input.toLowerCase()) ||
-        car.model.toLowerCase().includes(input.toLowerCase()) ||
-        car.category.toLowerCase().includes(input.toLowerCase()) ||
-        car.transmission.toLowerCase().includes(input.toLowerCase())
+        car.brand.toLowerCase().includes(searchLower) ||
+        car.model.toLowerCase().includes(searchLower) ||
+        car.category.toLowerCase().includes(searchLower) ||
+        car.transmission.toLowerCase().includes(searchLower)
       );
     });
 
@@ -65,7 +65,7 @@ const Cars = () => {
 
   useEffect(() => {
     cars.length > 0 && !isSearchData && applyFilter();
-  }, [input, cars]);
+  }, [search, cars]);
 
   return (
     <div>
@@ -101,8 +101,8 @@ const Cars = () => {
           <img src={assets.search_icon} alt="" className="w-4.5 h-4.5 mr-2" />
 
           <input
-            onChange={(e) => setInput(e.target.value)}
-            value={input}
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
             type="text"
             placeholder={t("cars.search")}
             className="w-full h-full outline-none text-gray-500"
