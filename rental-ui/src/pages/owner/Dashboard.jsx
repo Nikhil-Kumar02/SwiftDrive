@@ -1,4 +1,10 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
+import React, { useEffect, useState } from 'react';
+import { useAppContext } from '../../context/AppContext';
+import Title from '../../components/owner/Title';
+import { assets } from '../../assets/assets';
+import toast from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
   const {axios, isOwner, currency} = useAppContext();

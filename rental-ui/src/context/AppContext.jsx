@@ -7,15 +7,15 @@ axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 const AppContext = createContext();
 
-export function useAppContext() {
+export const useAppContext = () => {
     const context = useContext(AppContext);
     if (!context) {
         throw new Error("useAppContext must be used within an AppProvider");
     }
     return context;
-}
+};
 
-export function AppProvider({ children }) {
+export const AppProvider = ({ children }) => {
     const navigate = useNavigate();
     const currency = import.meta.env.VITE_CURRENCY;
 
@@ -200,4 +200,4 @@ export function AppProvider({ children }) {
     return (
         <AppContext.Provider value={value}>{children}</AppContext.Provider>
     );
-}
+};

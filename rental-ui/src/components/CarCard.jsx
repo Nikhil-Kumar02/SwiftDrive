@@ -2,6 +2,8 @@ import React from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "../context/AppContext";
+import toast from "react-hot-toast";
 
 const CarCard = ({ car, onCompare, isComparing }) => {
   const { t } = useTranslation();
