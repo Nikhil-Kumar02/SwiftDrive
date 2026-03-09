@@ -19,7 +19,7 @@ export const AppProvider = ({children}) => {
     const [returnDate, setReturnDate] = useState('')
 
     const [cars, setCars] = useState([])
-    const [search, setSearch] = useState('')
+    // const [search, setSearch] = useState('')
     const [selectedCars, setSelectedCars] = useState([])
     const [showComparison, setShowComparison] = useState(false)
 
@@ -90,28 +90,71 @@ export const AppProvider = ({children}) => {
         localStorage.removeItem('token')
         setToken(null)
         setUser(null)
-        setIsOwner(false)
-        axios.defaults.headers.common['Authorization'] = ''
         toast.success('You have been logged out successfully')
     }
 
+    const [search, setSearch] = useState("");
+    const [wishlist, setWishlist] = useState([]);
+
+    const fetchWishlist = async () => {
+        try {
+            const { data } = await axios.get('/api/user/wishlist')
+            if (data.success) {
+                setWishlist(data.wishlist.map(car => car._id))
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    const toggleWishlist = async (carId) => {
+        try {
+            const { data } = await axios.post('/api/user/wishlist/toggle', { carId })
+            if (data.success) {
+                toast.success(data.message)
+                fetchWishlist()
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
+    }
+
+    // Axios Interceptor to add token to every request
+    useEffect(() => {
+        const requestInterceptor = axios.interceptors.request.use((config) => {
+            const storedToken = localStorage.getItem('token');
+            if (storedToken) {
+                config.headers.Authorization = storedToken;
+            }
+            return config;
+        }, (error) => {
+            return Promise.reject(error);
+        });
+
+        return () => {
+            axios.interceptors.request.eject(requestInterceptor);
+        };
+    }, []);
+
     // useEffect to the retrieve token from localStorage
     useEffect(() => {
-        const token = localStorage.getItem('token')
-        setToken(token);
+        const storedToken = localStorage.getItem('token')
+        if (storedToken) {
+            setToken(storedToken);
+        }
         fetchCars()
     }, [])
 
     // useEffect to fetch user data when token is available
     useEffect(() => {
         if(token) {
-            axios.defaults.headers.common['Authorization'] = `${token}`
             fetchUser()
+            fetchWishlist()
         }
     }, [token])
 
     const value = {
-        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison, search, setSearch
+        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison, search, setSearch, wishlist, fetchWishlist, toggleWishlist
     }
 
     return (

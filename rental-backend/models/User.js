@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     role: { type: String, enum: ["owner", "user"], default: "user" },
     image: { type: String, default: "" },
+    wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Car" }],
   },
   { timestamps: true }
 );

@@ -14,7 +14,38 @@ const CarDetails = () => {
 
   const navigate = useNavigate();
   const [car, setCar] = useState(null);
+  const [reviews, setReviews] = useState([]);
+  const [rating, setRating] = useState(5);
+  const [comment, setComment] = useState("");
   const currency = import.meta.env.VITE_CURRENCY;
+
+  const fetchReviews = async () => {
+    try {
+      const { data } = await axios.get(`/api/reviews/${id}`);
+      if (data.success) {
+        setReviews(data.reviews);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handlePostReview = async () => {
+    if (!comment) return toast.error("Please write a comment");
+    try {
+      const { data } = await axios.post(`/api/reviews/${id}`, { rating, comment });
+      if (data.success) {
+        toast.success(data.message);
+        setComment("");
+        setRating(5);
+        fetchReviews();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +69,7 @@ const CarDetails = () => {
 
   useEffect(() => {
     setCar(cars.find((car) => car._id === id));
+    fetchReviews();
   }, [cars, id]);
 
   return car ? (
@@ -123,12 +155,87 @@ const CarDetails = () => {
                   "Heated Seats",
                   "Rear View Mirror",
                 ].map((item) => (
-                  <li key={item}>
-                    <img src={assets.check_icon} className="h-4 mr-2" alt="" />{" "}
+                  <li key={item} className="flex items-center gap-2 text-gray-600">
+                    <img src={assets.check_icon} className="h-4" alt="" />{" "}
                     {item}
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <hr className="border-borderColor my-10" />
+
+            {/* Reviews Section */}
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <h1 className="text-2xl font-bold">Reviews ({reviews.length})</h1>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl font-semibold text-yellow-500">{car.rating ? car.rating.toFixed(1) : 0}</span>
+                  <div className="flex text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <span key={star} className={star <= Math.round(car.rating || 0) ? "fill-current" : "text-gray-300"}>★</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Review Form */}
+              <div className="bg-light p-6 rounded-xl border border-borderColor">
+                <h2 className="text-lg font-medium mb-4">Leave a Review</h2>
+                <div className="flex gap-2 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <button
+                      key={star}
+                      onClick={() => setRating(star)}
+                      className={`text-2xl transition-all ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
+                    >
+                      ★
+                    </button>
+                  ))}
+                </div>
+                <textarea
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  placeholder="Share your experience with this car..."
+                  className="w-full p-4 rounded-lg border border-borderColor outline-none focus:border-primary bg-white h-32"
+                />
+                <button
+                  onClick={handlePostReview}
+                  className="mt-4 px-8 py-2 bg-primary text-white rounded-lg hover:bg-primary-dull transition-all"
+                >
+                  Submit Review
+                </button>
+              </div>
+
+              {/* Review List */}
+              <div className="space-y-6">
+                {reviews.map((rev, idx) => (
+                  <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    key={rev._id}
+                    className="border-b border-borderColor pb-6 last:border-0"
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <img src={rev.user.image || assets.profile_img} alt="" className="w-12 h-12 rounded-full object-cover bg-gray-200" />
+                      <div>
+                        <p className="font-medium text-gray-800">{rev.user.name}</p>
+                        <div className="flex text-xs text-yellow-400">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <span key={star}>{star <= rev.rating ? "★" : "☆"}</span>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="ml-auto text-sm text-gray-400">{new Date(rev.createdAt).toLocaleDateString()}</p>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed italic">"{rev.comment}"</p>
+                  </motion.div>
+                ))}
+                {reviews.length === 0 && (
+                  <p className="text-center text-gray-400 py-10">No reviews yet. Be the first to review!</p>
+                )}
+              </div>
             </div>
           </motion.div>
         </motion.div>

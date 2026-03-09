@@ -142,13 +142,38 @@ export const getDashboardData = async (req, res) => {
         // Calculate monthly revenue from bookings where status is confirmed
         const monthlyRevenue = bookings.slice().filter(booking => booking.status === 'confirmed').reduce((acc, booking) => acc + booking.price, 0)
 
+        // Generate Chart Data for last 6 months
+        const chartData = Array.from({ length: 6 }).map((_, i) => {
+            const date = new Date();
+            date.setMonth(date.getMonth() - i);
+            const monthName = date.toLocaleString('default', { month: 'short' });
+            const monthIndex = date.getMonth();
+            const year = date.getFullYear();
+
+            const monthlyBookings = bookings.filter(b => {
+                const bDate = new Date(b.createdAt);
+                return bDate.getMonth() === monthIndex && bDate.getFullYear() === year;
+            });
+
+            const revenue = monthlyBookings
+                .filter(b => b.status === 'confirmed')
+                .reduce((acc, b) => acc + b.price, 0);
+
+            return {
+                name: monthName,
+                bookings: monthlyBookings.length,
+                revenue: revenue
+            };
+        }).reverse();
+
         const dashboardData = {
             totalCars: cars.length,
             totalBookings: bookings.length,
             pendingBookings: pendingBookings.length,
             completedBookings: completedBookings.length,
             recentBookings: bookings.slice(0, 3),
-            monthlyRevenue
+            monthlyRevenue,
+            chartData
         }
 
         res.json({success: true, dashboardData});
