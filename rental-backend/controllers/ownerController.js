@@ -1,7 +1,6 @@
 import imagekit from "../configs/imageKit.js";
 import User from "../models/User.js"
 import Car from "../models/Car.js"
-import fs from "fs"
 import Booking from "../models/Booking.js";
 
 // API To change the role to owner
@@ -39,9 +38,8 @@ export const addCar = async (req, res) => {
         const imageFile = req.file;
 
         // upload image to ImageKit
-        const fileBuffer = fs.readFileSync(imageFile.path);
         const response = await imagekit.upload({
-            file: fileBuffer,
+            file: imageFile.buffer,
             fileName: imageFile.originalname,
             folder: '/cars'
         })
@@ -192,9 +190,8 @@ export const updateuserImage = async (req, res) => {
         const imageFile = req.file;
 
         // upload image to ImageKit
-        const fileBuffer = fs.readFileSync(imageFile.path);
         const response = await imagekit.upload({
-            file: fileBuffer,
+            file: imageFile.buffer,
             fileName: imageFile.originalname,
             folder: '/users'
         })
