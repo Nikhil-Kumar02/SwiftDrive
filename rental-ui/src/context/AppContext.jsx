@@ -19,9 +19,10 @@ export const AppProvider = ({children}) => {
     const [returnDate, setReturnDate] = useState('')
 
     const [cars, setCars] = useState([])
-    // const [search, setSearch] = useState('')
-    const [selectedCars, setSelectedCars] = useState([])
-    const [showComparison, setShowComparison] = useState(false)
+    const [selectedCars, setSelectedCars] = useState([]);
+    const [showComparison, setShowComparison] = useState(false);
+    const [search, setSearch] = useState("");
+    const [wishlist, setWishlist] = useState([]);
 
     // Function to handle adding/removing cars from comparison
     const handleAddToComparison = (car) => {
@@ -85,16 +86,12 @@ export const AppProvider = ({children}) => {
         }
     }
 
-    // Function to logout the user
     const logout = () => {
         localStorage.removeItem('token')
         setToken(null)
         setUser(null)
         toast.success('You have been logged out successfully')
     }
-
-    const [search, setSearch] = useState("");
-    const [wishlist, setWishlist] = useState([]);
 
     const fetchWishlist = async () => {
         try {
