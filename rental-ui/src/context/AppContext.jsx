@@ -5,20 +5,28 @@ import { useNavigate } from "react-router-dom";
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
-export const AppProvider = ({children}) => {
-    const navigate = useNavigate()
+export function useAppContext() {
+    const context = useContext(AppContext);
+    if (!context) {
+        throw new Error("useAppContext must be used within an AppProvider");
+    }
+    return context;
+}
+
+export function AppProvider({ children }) {
+    const navigate = useNavigate();
     const currency = import.meta.env.VITE_CURRENCY;
 
-    const [token, setToken] = useState(null)
-    const [user, setUser] = useState(null)
-    const [isOwner, setIsOwner] = useState(false)
-    const [showLogin, setShowLogin] = useState(false)
-    const [pickupDate, setPickupDate] = useState('')
-    const [returnDate, setReturnDate] = useState('')
+    const [token, setToken] = useState(null);
+    const [user, setUser] = useState(null);
+    const [isOwner, setIsOwner] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [pickupDate, setPickupDate] = useState("");
+    const [returnDate, setReturnDate] = useState("");
 
-    const [cars, setCars] = useState([])
+    const [cars, setCars] = useState([]);
     const [selectedCars, setSelectedCars] = useState([]);
     const [showComparison, setShowComparison] = useState(false);
     const [search, setSearch] = useState("");
@@ -26,8 +34,8 @@ export const AppProvider = ({children}) => {
 
     // Function to handle adding/removing cars from comparison
     const handleAddToComparison = (car) => {
-        if (selectedCars.some(c => c._id === car._id)) {
-            const updated = selectedCars.filter(c => c._id !== car._id);
+        if (selectedCars.some((c) => c._id === car._id)) {
+            const updated = selectedCars.filter((c) => c._id !== car._id);
             setSelectedCars(updated);
             if (updated.length === 0) setShowComparison(false);
         } else {
@@ -37,20 +45,20 @@ export const AppProvider = ({children}) => {
                 setShowComparison(true);
                 toast.success(`Added ${car.brand} ${car.model}`);
             } else {
-                toast.error('Maximum 3 cars can be compared');
+                toast.error("Maximum 3 cars can be compared");
             }
         }
     };
 
     const handleRemoveFromComparison = (carId) => {
-        const updated = selectedCars.filter(c => c._id !== carId);
+        const updated = selectedCars.filter((c) => c._id !== carId);
         setSelectedCars(updated);
         if (updated.length === 0) setShowComparison(false);
     };
 
     // Load comparison cars from localStorage on mount
     useEffect(() => {
-        const saved = localStorage.getItem('comparisonCars');
+        const saved = localStorage.getItem("comparisonCars");
         if (saved) {
             setSelectedCars(JSON.parse(saved));
         }
@@ -58,75 +66,80 @@ export const AppProvider = ({children}) => {
 
     // Save comparison cars to localStorage whenever they change
     useEffect(() => {
-        localStorage.setItem('comparisonCars', JSON.stringify(selectedCars));
+        localStorage.setItem("comparisonCars", JSON.stringify(selectedCars));
     }, [selectedCars]);
 
     // Function to check if user is logged in
     const fetchUser = async () => {
         try {
-            const {data} = await axios.get('/api/user/data')
-            if(data.success) {
+            const { data } = await axios.get("/api/user/data");
+            if (data.success) {
                 setUser(data.user);
-                setIsOwner(data.user.role === 'owner')
+                setIsOwner(data.user.role === "owner");
             } else {
-                navigate('/')
+                navigate("/");
             }
-        } catch(error) {
-            toast.error(error.message)
+        } catch (error) {
+            toast.error(error.message);
         }
-    }
+    };
 
     // Function to fetch all cars from ther server
     const fetchCars = async () => {
         try {
-            const {data} = await axios.get('/api/user/cars')
-            data.success ? setCars(data.cars) : toast.error(data.message)
-        } catch(error) {
-            toast.error(error.message)
+            const { data } = await axios.get("/api/user/cars");
+            data.success ? setCars(data.cars) : toast.error(data.message);
+        } catch (error) {
+            toast.error(error.message);
         }
-    }
+    };
 
     const logout = () => {
-        localStorage.removeItem('token')
-        setToken(null)
-        setUser(null)
-        toast.success('You have been logged out successfully')
-    }
+        localStorage.removeItem("token");
+        setToken(null);
+        setUser(null);
+        toast.success("You have been logged out successfully");
+    };
 
     const fetchWishlist = async () => {
         try {
-            const { data } = await axios.get('/api/user/wishlist')
+            const { data } = await axios.get("/api/user/wishlist");
             if (data.success) {
-                setWishlist(data.wishlist.map(car => car._id))
+                setWishlist(data.wishlist.map((car) => car._id));
             }
         } catch (error) {
-            console.error(error)
+            console.error(error);
         }
-    }
+    };
 
     const toggleWishlist = async (carId) => {
         try {
-            const { data } = await axios.post('/api/user/wishlist/toggle', { carId })
+            const { data } = await axios.post("/api/user/wishlist/toggle", {
+                carId,
+            });
             if (data.success) {
-                toast.success(data.message)
-                fetchWishlist()
+                toast.success(data.message);
+                fetchWishlist();
             }
         } catch (error) {
-            toast.error(error.message)
+            toast.error(error.message);
         }
-    }
+    };
 
     // Axios Interceptor to add token to every request
     useEffect(() => {
-        const requestInterceptor = axios.interceptors.request.use((config) => {
-            const storedToken = localStorage.getItem('token');
-            if (storedToken) {
-                config.headers.Authorization = storedToken;
+        const requestInterceptor = axios.interceptors.request.use(
+            (config) => {
+                const storedToken = localStorage.getItem("token");
+                if (storedToken) {
+                    config.headers.Authorization = storedToken;
+                }
+                return config;
+            },
+            (error) => {
+                return Promise.reject(error);
             }
-            return config;
-        }, (error) => {
-            return Promise.reject(error);
-        });
+        );
 
         return () => {
             axios.interceptors.request.eject(requestInterceptor);
@@ -135,32 +148,56 @@ export const AppProvider = ({children}) => {
 
     // useEffect to the retrieve token from localStorage
     useEffect(() => {
-        const storedToken = localStorage.getItem('token')
+        const storedToken = localStorage.getItem("token");
         if (storedToken) {
             setToken(storedToken);
         }
-        fetchCars()
-    }, [])
+        fetchCars();
+    }, []);
 
     // useEffect to fetch user data when token is available
     useEffect(() => {
-        if(token) {
-            fetchUser()
-            fetchWishlist()
+        if (token) {
+            fetchUser();
+            fetchWishlist();
         }
-    }, [token])
+    }, [token]);
 
     const value = {
-        navigate, currency, axios, user, setUser, token, setToken, isOwner, setIsOwner, fetchUser, showLogin, setShowLogin, logout, fetchCars, cars, setCars, pickupDate, setPickupDate, returnDate, setReturnDate, selectedCars, setSelectedCars, showComparison, setShowComparison, handleAddToComparison, handleRemoveFromComparison, search, setSearch, wishlist, fetchWishlist, toggleWishlist
-    }
+        navigate,
+        currency,
+        axios,
+        user,
+        setUser,
+        token,
+        setToken,
+        isOwner,
+        setIsOwner,
+        fetchUser,
+        showLogin,
+        setShowLogin,
+        logout,
+        fetchCars,
+        cars,
+        setCars,
+        pickupDate,
+        setPickupDate,
+        returnDate,
+        setReturnDate,
+        selectedCars,
+        setSelectedCars,
+        showComparison,
+        setShowComparison,
+        handleAddToComparison,
+        handleRemoveFromComparison,
+        search,
+        setSearch,
+        wishlist,
+        fetchWishlist,
+        toggleWishlist,
+    };
 
     return (
-        <AppContext.Provider value={value}>
-            {children}
-        </AppContext.Provider>
-    )
-}
-
-export const useAppContext = () => {
-    return useContext(AppContext);
-}
+        <AppContext.Provider value={value}>{children}</AppContext.Provider>
+    );
+}
