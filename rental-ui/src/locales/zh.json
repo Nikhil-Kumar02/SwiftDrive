@@ -150,6 +150,8 @@
     "compareSubtitle": "并排比较最多3辆汽车",
     "clearAll": "清除全部",
     "addMore": "添加更多汽车",
-    "day": "天"
+    "day": "天",
+    "compareItems": "已选项目",
+    "features": "特征"
   }
 }

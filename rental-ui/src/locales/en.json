@@ -67,8 +67,8 @@
     "status": "Status",
     "price": "Price",
     "confirmed": "Confirmed",
-    "pending": "Pending"
-    ,"cancelled": "Cancelled"
+    "pending": "Pending",
+    "cancelled": "Cancelled"
   },
   "featured": {
     "title": "Featured Cars",
@@ -169,6 +169,8 @@
     "select": "Select",
     "deselect": "Deselect",
     "clearAll": "Clear All",
-    "addMore": "Add More Cars"
+    "addMore": "Add More Cars",
+    "compareItems": "items selected",
+    "features": "Features"
   }
 }

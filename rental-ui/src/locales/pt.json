@@ -150,6 +150,8 @@
     "compareSubtitle": "Compare até 3 carros lado a lado",
     "clearAll": "Limpar Tudo",
     "addMore": "Adicionar Mais Carros",
-    "day": "dia"
+    "day": "dia",
+    "compareItems": "itens selecionados",
+    "features": "Características"
   }
 }

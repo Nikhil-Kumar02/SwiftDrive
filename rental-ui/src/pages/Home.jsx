@@ -20,7 +20,13 @@ const Home = () => {
           onClose={() => setShowComparison(false)}
           onAddMore={() => {
             setShowComparison(false)
-            setTimeout(() => window.scrollTo(0, 0), 100)
+            navigate('/cars')
+            setTimeout(() => {
+              const element = document.getElementById('car-list');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 500)
           }}
         />
       )}

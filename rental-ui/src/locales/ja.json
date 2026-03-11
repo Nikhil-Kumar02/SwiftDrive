@@ -150,6 +150,8 @@
     "compareSubtitle": "最大3台の車を並べて比較",
     "clearAll": "すべてクリア",
     "addMore": "さらに車を追加",
-    "day": "日"
+    "day": "日",
+    "compareItems": "選択されたアイテム",
+    "features": "特徴"
   }
 }

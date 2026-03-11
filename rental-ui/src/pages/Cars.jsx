@@ -115,7 +115,10 @@ const Cars = () => {
           onClose={() => setShowComparison(false)}
           onAddMore={() => {
             setShowComparison(false);
-            setTimeout(() => window.scrollTo(0, 0), 100);
+            const element = document.getElementById('car-list');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
         />
       )}
@@ -156,7 +159,7 @@ const Cars = () => {
         </motion.div>
       </motion.div>
 
-      <div className="flex flex-col lg:flex-row gap-1 sm:gap-10 px-6 md:px-16 lg:px-24 xl:px-32 mt-10 max-w-7xl mx-auto">
+      <div id="car-list" className="flex flex-col lg:flex-row gap-1 sm:gap-10 px-6 md:px-16 lg:px-24 xl:px-32 mt-10 max-w-7xl mx-auto">
         
         {/* Filter Sidebar */}
         <div className="min-w-60">

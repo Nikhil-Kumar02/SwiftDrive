@@ -12,7 +12,7 @@ The project is split into two main directories:
 
 ---
 
-## ✨ Key Features (Recently Added)
+## ✨ Key Features
 
 - **Advanced Filtering & Sorting**: Easily find cars by category, fuel type, and price.
 - **Car Comparison**: Compare up to 3 cars side-by-side with localized data.

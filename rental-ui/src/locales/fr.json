@@ -150,6 +150,8 @@
     "compareSubtitle": "Comparez jusqu'à 3 voitures côte à côte",
     "clearAll": "Tout Effacer",
     "addMore": "Ajouter Plus de Voitures",
-    "day": "Jour"
+    "day": "Jour",
+    "compareItems": "éléments sélectionnés",
+    "features": "Caractéristiques"
   }
 }
